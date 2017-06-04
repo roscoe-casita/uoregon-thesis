@@ -1,0 +1,155 @@
+\documentclass[10pt]{article}
+
+\usepackage{mathtools} 
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+<<<<<<< HEAD
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+=======
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+>>>>>>> a972845c9d657d1be9424c1bdb9100de41be700a
+
+\graphicspath{{img/}}
+
+\title{Algorithm for the Hypergraph Traversal Problem }
+\author{
+	Masters Thesis: Roscoe Casita \\
+	Advisor: Dr. Boyana Norris\\
+}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	\begin{abstract}
+		We introduce the hypergraph traversal problem along with the known solutions: Naive, Branch and bound, Polynomial space (recursive). We introduce a polynomial space (serial) version of the algorithm. Odometers are introduced as an implementation detail for future reference. A rigorous test system is used to ensure completeness. Lastly performance is measured in comparison to the other systems. 
+	\end{abstract}
+	\tableofcontents
+	\newpage
+
+"In addition, the theory of hypergraphs is seen to be a very useful tool for the solution of integer optimization problems when the matrix has certain special properties" - C. Berge ~\cite{Hypergraph:Book}
+
+\section{Hypergraph Transversal Problem}
+
+\subsection{Definition: Hypergraph}
+Let a Hypergraph be $H = (V,E)$ according to the Hypergraph book~\cite{Hypergraph:Book} such that $V$ is a set over vertexes $v_i$. $E$ is a set over hyperedges $e_i$ where each hyperedge $e_i$ is a set $v_j$. The following restrictions are imposed for talking about a \textit{normal} hypergraph.
+\begin{equation}
+	\begin{matrix}
+	\forall e_i \in E \\
+	\forall v_j \in e_i \\
+	\end{matrix}
+	\space
+	\begin{Bmatrix}
+	v_j \in V\\
+	\end{Bmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{matrix}
+\forall v_i \in V \\
+\exists e_i \in E \\
+\end{matrix}
+\space
+\begin{Bmatrix}
+v_i \in e_i\\
+\end{Bmatrix}
+\end{equation}
+
+
+\subsection{Definition: Simple Hypergraph}
+<<<<<<< HEAD
+A $simple$ hypergraph over $H=(V,E)$ has the following restrictions applied:
+
+\begin{equation}
+	\begin{matrix}
+	\forall e , e' \in E \space
+	\end{matrix}
+	\space \space
+	\begin{Bmatrix}
+		e \not\subseteq e'\\
+		e' \not\subseteq e\\
+	\end{Bmatrix}
+\end{equation}
+\begin{equation}
+\begin{matrix}
+\forall e_i \in E \\
+\forall v_j, v_j' \in e_i \\
+\end{matrix}
+\space \space
+\begin{Bmatrix}
+v_j \ne v_j'\\
+\end{Bmatrix}
+\end{equation}
+Thus the \textit{simple} hypergraph is defined so that all hyperedges do not contain other hyperedges. Secondly all vertexes in a given hyperedge are unique. Notice that this is a simple relaxation of a graph. 
+
+\subsection{Definition: A hitting set for a hypergraph}
+A hitting set $s$ is a subset of the vertexes of $V$ the hypergraph such that every edge contains at least one of the vertexes in the subset. 
+\begin{equation}
+
+\end{equation}
+=======
+A simple hypergraph $H$ is such that $\forall e, e' \in E | e \notin e' \wedge e' \notin e \wedge |e| \leq |V| \wedge |e| \leq |V|$. The following must also be imposed to satisfy the definition of a simple hypergraph: $\forall e \in E |\{ \forall v \in e \wedge \forall v' \in e |\{ v \ne v'\} \}$. Thus every edge is not completely contained inside of any other edge. Every edge is also smaller then the size of the number of vertexes. The additional restriction must be stated because hyperedges are lists, not sets. Thus they can contain repeats. Here the definition of a simple hypergraph is one where the hyperedges do NOT contain repeated vertexes. 
+>>>>>>> a972845c9d657d1be9424c1bdb9100de41be700a
+
+\subsection{Definition: Simple Minimal Hypergraph Transversal}
+A simple hypergraph transversal $T$ over the hypergraph $H=(V,E)$ is a set of vertexes $T \subseteq V$ such that $\forall e \in E  \exists v | v \in e \wedge v \in T$. A minimal transversal is defined such that if the removal of any vertex $v$ from $T$, the above property would fail to hold. Notice that this definition is the minimal hitting set.
+
+\subsection{Problem: Find all minimal transversals for a given hypergraph}
+There are $2^{|V|}$ possible combination sets that can be derived from the hypergraph $H=(V,E)$. There are potentially thus $2^{|V|}$ transversals that need to be enumerated. Consider all transversals of the hypergraph \\ $$H=(\{\{1,2,3\},\{A,B,C\}\},\{1,2,3,A,B,C\})$$ $$T=(\{1,A\},\{1,B\},..,\{3,C\})$$  Thus every piecewise combination of this hypergraphs hyperedges is a valid transversal, thus the maximal upper bound on the total number of minimal transversals of all simple hypergraphs is  $O(2^{|V|})$ total transversals. Thus scalable algorithms must use polynomial space storage and exponential time to enumerate the potentially exponential number of traversals.
+
+\section{Naive solution} 
+
+\section{Branch and Bound}
+
+\section{Polynomial Space Solution (Recursive)}
+
+\section{Pseudo-Polynomial Space Solution (Serial)}
+
+\section{Testing}
+Hypergraphs are a relatively new datastructure; large datasets are not currently modeled as hypergraphs so ensuring correctness is the onus of the implementers. We seek to prove the algorithm is correct for a large set of small hypergraphs and a small set of large hypergraphs. The following algorithm will generate all simple hypergraphs with node count $N$. The complexity is exponentially exponential on the order of ${{{N!}^{N-1!}}^{N-2!}}^{...}$. 
+
+\begin{algorithm}
+	\caption{Generate All Hypergraphs over Nodes}\label{euclid}
+	\begin{algorithmic}[1]
+		\Procedure{GenHypergraphs: Nodes CallbackFunc}{}
+		\State $CurrentHypergraph \gets Hyperedge(Nodes)$
+		\State $CurrentQueue.push(CurrentHypergraph)$
+		\State $WorkQueue.push(CurrentQueue)$
+		\BState \emph{Loop}: 
+		\State $CurrentQueue \gets WorkQueue.pop()$
+		\State $CurrentHypergraph \gets CurrentQueue.pop()$
+		\If {$!CurrentQueue.empty()$}
+		\State  $WorkQueue.push(CurrentQueue)$
+		\EndIf
+		\State \textbf{Invoke:} $CallbackFunc(CurrentHypergraph)$
+		\State $CurrentQueue \gets GenerateHypergraphChildren(CurrentHypergraph)$
+		\If {$!CurrentQueue.empty()$}
+		\State  $WorkQueue.push(CurrentQueue)$
+		\EndIf
+		\If {$!WorkQueue.empty()$}
+		\State  \textbf{goto:} \textit{Loop}
+		\EndIf
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
+
+\section{Performance}
+
+\section{Future Directions}
+The serialized version of the
+
+
+\newpage
+\section{Bibliography}
+\nocite{*}
+\bibliographystyle{abbrv}
+\bibliography{ThesisBibliography}
+
+\end{document}

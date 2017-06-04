@@ -1,0 +1,26 @@
+digraph "Unique Reaction Hypergraph"{
+graph[fontname = "Helvetica-Oblique",
+fontsize = 12,
+label = "Unique Reaction Hypergraph",
+size = "12,12"];
+15510466 [label="H2" fillcolor="green:yellow" style="filled" gradientangle=90];
+6614365 [label="O2" fillcolor="green:yellow" style="filled" gradientangle=90];
+823098 [label="H2O" fillcolor="green:yellow" style="filled" gradientangle=90];
+50208988 [label="H2O2" fillcolor="green:yellow" style="filled" gradientangle=90];
+37554663 [label="-6 kJ" shape=circle fillcolor="red:blue" style="filled" gradientangle=90];
+15510466 -> 37554663 [label ="2" color="blue"];
+6614365 -> 37554663 [label ="1" color="blue"];
+37554663 -> 823098 [label ="1" color="red"];
+47345269 [label="-8 kJ" shape=circle fillcolor="red:blue" style="filled" gradientangle=90];
+15510466 -> 47345269 [label ="4" color="blue"];
+6614365 -> 47345269 [label ="4" color="blue"];
+47345269 -> 50208988 [label ="1" color="red"];
+6944508 [label="16 kJ" shape=circle fillcolor="red:blue" style="filled" gradientangle=90];
+15510466 -> 6944508 [label ="4" color="blue"];
+50208988 -> 6944508 [label ="1" color="blue"];
+6944508 -> 823098 [label ="4" color="red"];
+55620207 [label="4 kJ" shape=circle fillcolor="red:blue" style="filled" gradientangle=90];
+50208988 -> 55620207 [label ="1" color="blue"];
+55620207 -> 6614365 [label ="2" color="red"];
+55620207 -> 823098 [label ="2" color="red"];
+}

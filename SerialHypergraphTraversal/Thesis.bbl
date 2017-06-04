@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{Hypergraph:Book}
+C.~Berge.
+\newblock {\em Hypergraphs}.
+\newblock North-Holland Mathematical Library, 1989.
+
+\bibitem{catalyurek2007hypergraph}
+U.~V. Catalyurek, E.~G. Boman, K.~D. Devine, D.~Bozdag, R.~Heaphy, and L.~A.
+  Riesen.
+\newblock Hypergraph-based dynamic load balancing for adaptive scientific
+  computations.
+\newblock In {\em Parallel and Distributed Processing Symposium, 2007. IPDPS
+  2007. IEEE International}, pages 1--11. IEEE, 2007.
+
+\bibitem{Odometer:Fuchs}
+P.~P. Fuchs.
+\newblock {\em Permutation Odometers}.
+\newblock www.quickperm.org/odometers.php, 2016.
+
+\bibitem{molnar2014applications}
+B.~Moln{\'a}r.
+\newblock Applications of hypergraphs in informatics: a survey and
+  opportunities for research.
+\newblock {\em Ann. Univ. Sci. Budapest. Sect. Comput}, 42:261--282, 2014.
+
+\end{thebibliography}

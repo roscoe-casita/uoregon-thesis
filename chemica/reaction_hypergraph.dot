@@ -1,0 +1,22 @@
+digraph Tree
+{
+ H2 -> {O2 -> { H2O -> H2O2}}
+
+{rank=same Set1 Set5}
+
+ Set1 [shape=box label = "{H2} = NR"]
+Set1 -> Set2
+ Set2[shape=box label = "{H2,O2} = NR"]
+Set2 -> Set3
+ Set3 [shape=box label = "{H2,O2,H2O} = UR"]
+Set3 -> Set4
+ Set4 [shape=box label = "{H2,O2,H2O,H2O2} = LC"]
+Set4 -> Set5
+ Set5 [shape=box label = "{H2,O2,H2O2} = UR"]
+Set5 -> Set6
+ Set6 [shape=box label = "{H2,H2O} = NR"]
+Set6 -> Set7
+ Set7 [shape=box label = "{H2,H2O,H2O2} = UR"]
+Set7 -> Set8
+ Set8 [shape=box label = "{H2,H2O2} = NR"]
+}

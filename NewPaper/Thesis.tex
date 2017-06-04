@@ -1,0 +1,124 @@
+\documentclass[10pt]{article}
+
+\usepackage{mathtools} 
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{listings}
+\graphicspath{{img/}}
+
+\title{Survey for the Missing and Fractured Nomenclature of Odometers \& Hypergraphs}
+\author{
+        Masters Thesis: Roscoe Casita \\
+        Advisor: Dr. Boyana Norris\\
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+\textit{
+There are only two hard problems in Computer Science: cache invalidation and naming things. - Phil Karlton (as quoted online but no original source.)}
+
+\begin{abstract}
+	
+	This paper seeks to demonstrate that there is both missing and fracture nomenclature used in describing hypergraphs. Multiple authors have used different words to describe type specializations of the hypergraph data structure. Secondly multiple authors have called different structures the same word. Conversely a rarely or unnamed data structure (Odometers) is used in routines that traverse and reason over hypergraphs. No new nomenclature is introduced.  
+\end{abstract}
+
+"In addition, the theory of hypergraphs is seen to be a very useful tool for the solution of integer optimization problems when the matrix has certain special properties" - C. Berge ~\cite{Hypergraph:Book}
+
+
+
+Odometers are fundamentally related to the structure, traversal and ability to reason about Hypergraphs. Odometers are a simple ordered list of integer indexes. The routines that operate and restrict the odometer induce structure and constraints in hypergraphs. Restricting a hypergraph odometer correctly results in a undirected graph traversal vs directed graph traversal etc. Some of the routines have been documented in the original book on Hypergraphs ~\cite{Hypergraph:Book}. Empirical evidence has been gathers from multitudes of papers and examination of source. 
+
+\newpage
+\section{Odometers}
+\subsection{Odometer}
+
+~\cite{Odometer:Fuchs}
+\subsection{Pins}:
+Hypergraph cut for vhdl \\
+
+\section{Hypergraphs}
+\subsection{Hypergraph}
+Every paper has the word hypergraph contained in it, thus only the book itself is cited: ~\cite{Hypergraph:Book}
+
+
+\subsection{Regular Hypergraph}
+A hypergraph where all the vertices (nodes) have the same degree is said to be ``regular''.
+~\cite{Hypergraph:Book}
+
+\subsection{\textit{Generalized Hypergraph}}
+The notion of hypergraph may be extended in a way that the hyperedges can be represented in certain cases as vertics(nodes), i.e. a hyperedge may consist of both vertex (node) and hyperedges as well. ~\cite{molnar2014applications}
+
+\subsection{Induced subhypergraph}
+No definition given. ~\cite{molnar2014applications}
+\subsection{Subhypergraph}
+No definition given. ~\cite{molnar2014applications}
+\subsection{Partial Hypergraph}
+No definition given. ~\cite{molnar2014applications}
+
+
+\subsection{Multilevel Hypergraph}
+Used without definition in reference to other work. ~\cite{catalyurek2007hypergraph}
+
+\subsection{Uniform Hypergraph}
+
+\section{Hyperedge}
+\subsection{Hyperedge}
+All of the names under this entry are called hyperedges. Instead of citing every paper in this entry, only the book is cited. Originally the hyperedge was still just called an Edge. Each specific variadic definition includes the arbitrary defintion. If the paper is not cited in a definition then it is assumed to be using the defintion in the book. ~\cite{Hypergraph:Book}\\
+
+TODO: Need definition here.
+
+\subsection{Weighted Hyperedge}
+Generally accepted as a list of nodes in a hypergraph, also includes a weighting.
+
+\subsection{Nets}
+A set of nets (hyperedges) over vertices (nodes).
+~\cite{catalyurek2007hypergraph}
+
+
+\section{Hyperarc}
+\subsubsection{as Directed Hyperedge}
+~\cite{molnar2014applications}
+
+
+\section{Hypernode \& Node}
+
+
+
+
+\subsection{Ordered Odometer}
+\subsection{Ordered Hypergraph}
+\subsection{Ordered Hyperedge}
+\subsection{Directed Odometer}
+\subsection{Directed Hypergraph}
+\subsection{Directed Hyperedge}
+
+
+
+\subsection{Undirected Odometer}
+\subsection{Undirected Hypergraph}
+\subsection{Undirected Hyperedge}
+\subsection{Hyperarc}
+
+
+\section{Hyperpath}
+
+\subsection{Directed Path}
+\subsubsection{in Subhypergraph}
+Described as the cycle and path of interest for a traversal.
+~\cite{molnar2014applications}
+
+
+
+\section{Papers}
+\subsection{Molnar: ~\cite{molnar2014applications}}
+Describes the HyperGraphDB document manipulation framework using a \textbf{\textit{Generalized Hypergraph}}. \textbf{Hyperarc} defined as a \textbf{Directed Hyperedge}. A \textbf{Directed path} is analogous to document development life cycle. Introduces nomenclature without definition: \textbf{Induced subhypergraph}, \textbf{Subhypergraph}, \textbf{Partial Hypergraph}. \textbf{Odometers} not mentioned.
+
+
+\newpage
+\section{Bibliography}
+\nocite{*}
+\bibliographystyle{abbrv}
+\bibliography{ThesisBibliography}
+
+\end{document}

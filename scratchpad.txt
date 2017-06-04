@@ -1,0 +1,8 @@
+
+
+Linear Integer Variable:\\
+Ordering: \\
+List: a set with an associated ordering. \\
+
+
+Multilevel Hypergraph Partitioning: Applications in VLSI Domain

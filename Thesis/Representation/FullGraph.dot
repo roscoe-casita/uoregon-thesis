@@ -1,0 +1,51 @@
+ graph hypergraph{ 
+cb16da8e6a6c4dfbb33200e5d36084a2  [shape=point]
+cb16da8e6a6c4dfbb33200e5d36084a2 -- A
+cb16da8e6a6c4dfbb33200e5d36084a2 -- A
+ff244418a92a8ffd551fcf33c  [shape=point]
+ff244418a92a8ffd551fcf33c -- A
+ff244418a92a8ffd551fcf33c -- B
+a874c5da879477ba121ee98a7ddac10  [shape=point]
+a874c5da879477ba121ee98a7ddac10 -- A
+a874c5da879477ba121ee98a7ddac10 -- C
+c6c128c744d00a6212b434c2caa4a  [shape=point]
+c6c128c744d00a6212b434c2caa4a -- A
+c6c128c744d00a6212b434c2caa4a -- D
+e6376b264b64806a5504086b1c566ca  [shape=point]
+e6376b264b64806a5504086b1c566ca -- B
+e6376b264b64806a5504086b1c566ca -- A
+bc627ef2c94d12b62a4e013eee55dc  [shape=point]
+bc627ef2c94d12b62a4e013eee55dc -- B
+bc627ef2c94d12b62a4e013eee55dc -- B
+ff765e237de240479b73609b0b5529b3  [shape=point]
+ff765e237de240479b73609b0b5529b3 -- B
+ff765e237de240479b73609b0b5529b3 -- C
+e626ebdc95d34f718dab8ef0c3279abd  [shape=point]
+e626ebdc95d34f718dab8ef0c3279abd -- B
+e626ebdc95d34f718dab8ef0c3279abd -- D
+ef0fe87585148e7b6a1c5a8b9569009  [shape=point]
+ef0fe87585148e7b6a1c5a8b9569009 -- C
+ef0fe87585148e7b6a1c5a8b9569009 -- A
+fb2d233d419a8ad5b73b36e17bba  [shape=point]
+fb2d233d419a8ad5b73b36e17bba -- C
+fb2d233d419a8ad5b73b36e17bba -- B
+e20d1564f23bd95e421ba8777c1  [shape=point]
+e20d1564f23bd95e421ba8777c1 -- C
+e20d1564f23bd95e421ba8777c1 -- C
+fcb157c14cc4454f881491963aee0e48  [shape=point]
+fcb157c14cc4454f881491963aee0e48 -- C
+fcb157c14cc4454f881491963aee0e48 -- D
+d0ced61a7564c118bf1fc9d51e1c8df  [shape=point]
+d0ced61a7564c118bf1fc9d51e1c8df -- D
+d0ced61a7564c118bf1fc9d51e1c8df -- A
+c8155be79c3d4256b6a15cbcf90cbd48  [shape=point]
+c8155be79c3d4256b6a15cbcf90cbd48 -- D
+c8155be79c3d4256b6a15cbcf90cbd48 -- B
+c1dc63a587724aaf8fb7e49d1de3f928  [shape=point]
+c1dc63a587724aaf8fb7e49d1de3f928 -- D
+c1dc63a587724aaf8fb7e49d1de3f928 -- C
+d49519adae104c57ae162dff12894f6f  [shape=point]
+d49519adae104c57ae162dff12894f6f -- D
+d49519adae104c57ae162dff12894f6f -- D
+
+}

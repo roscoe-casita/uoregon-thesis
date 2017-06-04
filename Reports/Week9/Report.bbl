@@ -1,0 +1,59 @@
+\begin{thebibliography}{1}
+
+\bibitem{RecHilbert}
+G.~BREINHOLT and C.~SCHIERZ.
+\newblock Algorithm 781: Generating hilbert’s space-filling curve by
+  recursion.
+\newblock {\em ACM Transactions on Mathematical Software}, 24(2):184--189, June
+  1998.
+
+\bibitem{KEVIN}
+K.~Buchin.
+\newblock {\em Space-Filling Curves, Delaunay Tessellation of Random Point
+  Sets, and Flow Complexes}.
+\newblock PhD thesis, Freie Universitat, Berlin, Germany, 1 2008.
+
+\bibitem{BUTZ}
+A.~R. BUTZ.
+\newblock Alternative algorithm for hilbert's space-filling curve.
+\newblock {\em IEEE TRANSACTIONS ON COMPUTERS}, 20(1):424--426, 4 1971.
+
+\bibitem{ZOLTAN}
+P.~M. Campbell, K.~D. Devine, J.~E. Flaherty, L.~G. Gervasio, and J.~D.
+  Teresco.
+\newblock Dynamic octree load balancing using space-filling curves.
+\newblock Technical Report~1, Williams College Department of Computer Science,
+  Williamstown, MA 01267, 1 2003.
+
+\bibitem{ClosedCurve}
+C.-S. Chen, S.-Y. Lin, M.-H. Fan, and C.-H. Huang.
+\newblock A closed-form algorithm for converting hilbert space-filling curve
+  indices.
+\newblock {\em International Journal of Computer Science}, 37(1), Feburary
+  2010.
+
+\bibitem{NCA}
+M.~Fernando and H.~Sundar.
+\newblock Hilbert curve based flexible dynamic partitioning scheme for adaptive
+  scientific computations.
+\newblock Technical Report~1, School of Computing University of Utah, Utah, 1
+  2016.
+
+\bibitem{OCTCURVE}
+I.~John J.~Bartholdi and P.~Goldsman.
+\newblock {\em Vertex-Labeling Algorithms for the Hilbert Spacefilling Curve}.
+\newblock PhD thesis, School of Industrial and Systems Engineering, Georgia
+  Institute of Technology, Atlanta, Georgia 30332-0205 USA, 1 2000.
+
+\bibitem{CURVES}
+N.~Reissmann, M.~Jahre, and J.~C. Meyer.
+\newblock A study of energy and locality effects using space-filling curves.
+\newblock Technical Report 160606133, Dept. of Computer and Information Science
+  (IDI) NTNU, Norway, NTNU, Norway, 6 2016.
+
+\bibitem{MSHSFC}
+L.~Tautenhahn.
+\newblock Draw a space filling curve of odd sizes.
+\newblock Odd work, 2003.
+
+\end{thebibliography}

@@ -1,0 +1,172 @@
+\chapter{Iterative Pseudo-Polynomial Space}
+
+This paper now introduces the iterative psuedo-polynomial space solution to enumerating all minimal hypergraph traversals. First the depth control is used to expand the tree to the leaf and store the next nodes to be processed. Each node is then removed and processed, if the node is a leaf then the minimal transversal is visited, if the node is not a leaf then generate a new set of children to process, if no children are generated then this minimal transversal does not have any children after the next edge. 
+
+\section{Define: Hypergraph stack frame}
+A hypergraph stack frame $HSF = (Transversals,Negations)$ is a collection where $Transversals$ is a list of generalized variables (odometers), $Negations$ is a list of generalized variables (odometers) for $IsAppropriate$.
+
+
+\subsection{Define: Gamma}
+A Gamma is the piecewise segmentation of an individual generalized variable intersecting parts with the incoming edge. $G = (XMinusY, XIntersectY, YMinusX)$.
+
+\subsection{Define: IHGResult }
+An IHGResult $ihg\_result = (Alphas,Betas,Gammas,new\_alpha)$ is a collection where $Alphas$ is a list of generalized variables (Odometers), $Betas$ is a list of generalized variables (odometers), Gammas is a list of Gammas from the previous definition, and $new\_alpha$ is the incoming edge minus all intersections.
+
+\subsection{Generate IHGResult from Transversals and Edge}
+Using the previous definitions the function to break a transversals generalized variables down into the constituent types and pieces. The function $IntersectTransversalWithEdge$ breaks apart the entire intersection of a minimal transversal with a new edge. 
+
+\newpage
+\begin{algorithm}
+	\caption{IntersectTransversalWithEdge}\label{IntersectTransversalWithEdge}
+	\begin{algorithmic}[1]
+		\Function{$IntersectTransversalWithEdge(list\_of\_transversals,edge)$}{}
+		\State $return\_value \gets \emptyset$ // IHGResult.
+		\State $new\_alpha \gets edge$ // copy incoming edge.
+		\ForAll {$\{g_t,i_t\} \in list\_of\_transversals $}
+		\State $intersect = Intersection(g_t,edge)$
+		\State $new\_alpha \gets Minus(new\_alpha,interset)$
+		\If {$intersect.size()=0$}
+		\State $return\_value.Alphas.push(g_t)$
+		\Else
+		\If {$intersect.size()=g_t.size()$}
+		\State $return\_value.Betas.push(g_t)$		
+		\Else
+		\State $Gamma \gets \emptyset$ // Gamma type.
+		\State $Gamma.XMinusY = Minus(g_t,edge)$
+		\State $Gamma.XIntersectY = interset$
+		\State $Gamma.YMinusX = Minus(edge,g_t)$
+		\State $return\_value.Gammas.push(gamma)$
+		\EndIf
+		\EndIf
+		\EndFor
+		\State $return\_value.new\_alpha = new\_alpha$
+		\State \Return $return\_value$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\section{IS Appropriate}
+
+\begin{algorithm}
+	\caption{IsAppropriate}\label{IsAppropriate}
+	\begin{algorithmic}[1]
+		\Function{$IsAppropriate(HSF,edge)$}{}
+		\State $list\_of\_new_traversals \gets \emptyset$
+		\ForAll {$\{o,i\} \in HSF.Transversals$}
+		\State $gv \gets o$
+		\ForAll {$\{n,i\} \in HSF.Transversals$}
+		\If {$DoesACoverB(n,gv)=true$}
+		\State $gv \gets Minus(gv,n)$
+		\EndIf
+		\EndFor
+			\If {$gv.size()>0$}
+			\State $list\_of\_new_traversals.push(gv)$
+			\EndIf
+		\EndFor
+		\If {$DoesAnyHitA(list\_of\_new_traversals ,edge)=false$}
+		\State \Return $false$
+		\EndIf
+		\State \Return $true$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+
+\section{Generate Next Depth}
+
+\begin{algorithm}
+	\caption{GenerateNextDepth}\label{GenerateNextDepth}
+	\begin{algorithmic}[1]
+		\Function{$GenerateNextDepth(HSF,edge)$}{}
+		\State $new\_frame \gets \emptyset $ // hypergraph stack frame
+		\State $return\_value \gets \emptyset $  // list of hypergraph stack frames.
+		\State $result \gets IntersectTransversalWithEdge(HSF.Transversals,edge)$
+		\If {$result.Gammas.size()==0$} 
+		\State $new\_frame.Transversals = HSF.Transversals$ 
+		\State $new\_frame.Negations = HSF.Negations$ 
+		\If {$result.Betas.size()>0$} 
+		\ForAll {$\{b,i\} \in result.Beta$}
+		\State $new\_frame.push(b)$    
+		\EndFor
+		\Else
+		\State $new\_frame.push(edge)$ 
+		\EndIf
+		\If {$IsAppropriate(new\_frame,edge)$}
+		\State $return\_value.push(new\_frame)$
+		\EndIf
+		\Else
+		
+		\ForAll {$list\_of\_bool \in Gen2expNtruefalse(result.Gammas.size()) $ }
+			\State $new\_frame.Transversals \gets result.Alphas$
+			\State $new\_frame.Negations \gets HSF.Negations$ 
+			\ForAll {$\{tf,j\} \in list\_of\_bool$}
+				\State $gamma \gets result.Gammas[j]$
+				\If {$tf[j]=false$}
+					\State $new\_frame.Transversals.push(gamma.XMinusY)$
+					\State $new\_frame.Negations.push(gamma.XIntersectY)$
+				\Else
+					\State $new\_frame.Transversals.push(gamma.XIntersectY)$
+				\EndIf
+	
+			\EndFor
+			\If {$IsAllTrue(tf) = true $}
+				\If {$result.new\_alpha.size()>0$}
+				\State $new\_frame.Transversals.push(result.new\_alpha)$
+				\EndIf
+			\Else 
+				\ForAll {$beta \in result.Betas$}
+				\State $new\_frame.Transverals.push(beta)$
+				\EndFor 
+				\If {$IsAllFalse(tf)= true$}
+				\ForAll {$gamma \in result.Gammas$}
+				\State $new\_frame.Negations.push(gamma.XMinusY)$
+				\EndFor 
+				\EndIf
+			
+			\EndIf
+		\If {$IsAppropriate(new\_frame,edge)=true$}
+		\State $returnValue.push(new\_frame)$
+		\State $new\_frame \gets \emptyset$
+		\EndIf
+		
+		\EndFor
+		\EndIf
+		\State \Return $return\_value$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+
+\newpage
+Depth First N-Way Tree Control
+
+\begin{algorithm}
+	\caption{HypergraphTransversals}\label{HypergraphTransversals}
+	\begin{algorithmic}[1]
+		\Function{$HypergraphTransversals(H,CallbackFunc)$}{}
+		\State $edge\_count \gets H.E.size()$
+		\State $control\_stack \gets list(edge\_count)$ // list of stacks pre-sized.
+		\State $HSF \gets \emptyset $ // current hypergraph stack frame
+		\State $HSF.Transversals.push(edge)$
+		\State $control \gets 0$ // depth control variable.
+		\State $control\_stack[control].push(HSF)$ // load the process.
+		\While {$control \geq 0$}
+		\If {$control\_stack[control].size()=0$}
+		\State $control \gets control-1$
+		\Else
+		\State $frame \gets control\_stack[control].pop()$
+		\If {$control = edge\_count-1$}
+		\State $CallbackFunc(frame.Transversals)$ // min transversal reached.
+		\Else
+		\State $control \gets control +1$
+		\State $next\_edge \gets H.E[control]$
+		\State $children \gets GenerateNextDepth(frame,next\_edge)$
+		\ForAll {$\{c,i\} \in children$}
+		\State $control\_stack[control].push(c)$ // next to be processed
+		\EndFor 
+		\EndIf
+		\EndIf
+		\EndWhile
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}

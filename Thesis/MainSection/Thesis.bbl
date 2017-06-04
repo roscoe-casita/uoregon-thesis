@@ -1,0 +1,96 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ausiello}
+G.~Ausiello, G.~F. Italiano, and U.~Nanni.
+\newblock Optimal traversal of directed hypergraphs.
+\newblock Technical report, University of Berkeley, 1992.
+
+\bibitem{Berge}
+C.~Berge.
+\newblock {\em Hypergraphs}.
+\newblock North-Holland Mathematical Library, 1989.
+
+\bibitem{HDLBASC}
+U.~V. Catalyurek, E.~G. Boman, K.~D. Devine, D.~Bozdag, R.~Heaphy, and L.~A.
+  Riesen.
+\newblock Hypergraph-based dynamic load balancing for adaptive scientific
+  computations.
+\newblock Technical Report 1-4244-0910-1/07, Ohio State University and Sandia
+  National Laboratories, Columbus, OH 43210, USA, 2007.
+
+\bibitem{Jens}
+J.~Clausen.
+\newblock Branch and bound algorithms - principles and examples.
+\newblock Master's thesis, University of Copenhagen, 1999.
+
+\bibitem{Devine}
+K.~D. Devine, E.~G. Boman, R.~T. Heaphy, R.~H. Bisseling, and U.~V. Catalyurk.
+\newblock Parallel hypergraph partitioning for scientific computing.
+\newblock 2006.
+
+\bibitem{Aurelien}
+A.~Ducournau and A.~Bretto.
+\newblock Random walks in directed hypergraphs and application to
+  semi-supervised image segmentation.
+\newblock {\em Computer Vision and Image Understanding}, pages 91--102, 2014.
+
+\bibitem{Fuchs}
+P.~P. Fuchs.
+\newblock Permutation odometers.
+\newblock 2016.
+
+\bibitem{TDHSPC}
+H.~Haverkort.
+\newblock An inventory of three-dimensional hilbert space-filling curves.
+\newblock Master's thesis, Eindhoven University of Technology, 2011.
+
+\bibitem{CMBONDV}
+J.~K. Lawder.
+\newblock Calculation of mappings between one and $n$-dimensional values using
+  the hilbert space-filling curve.
+\newblock Technical Report JL1/00, Birkbeck College University of London, Malet
+  Street London WC1E 7HX United Kingdom, August 2000.
+
+\bibitem{MDSFC}
+M.~F. Mokbel, W.~G. Aref, and I.~Kamel.
+\newblock Performance of multi-dimensional space-filling curves.
+\newblock Master's thesis, Purdue University, 2002.
+
+\bibitem{Molnar}
+B.~Moln\'{a}r.
+\newblock Applications of hypergraphs in informatics: A survey and
+  opportunities for research.
+\newblock {\em Annales Univ. Sci. Budapest.}, July 2014.
+
+\bibitem{Nielsen}
+L.~R. Nielsen, K.~A. Anderson, and D.~Pretolani.
+\newblock Finding the $k$ shortest hyperpaths: algorithms and applications.
+\newblock Technical report, University of Aarhus, 2004.
+
+\bibitem{ACM}
+C.~of~the ACM.
+\newblock How to partition a billion-node graph.
+\newblock 2014.
+
+\bibitem{PAwSH}
+A.~Rita and T.~Murali.
+\newblock Pathway analysis with signaling hypergraphs.
+\newblock {\em Publications of the ACM}, September 2014.
+
+\bibitem{Satu}
+S.~E. Schaeffer.
+\newblock Survey: Graph clustering.
+\newblock (I):27--64, May 2007.
+
+\bibitem{Sun}
+Z.~Sun, H.~Wang, H.~Wang, B.~Shao, and J.~Li.
+\newblock Efficient subgraph matching on billion node graphs.
+\newblock 2012.
+
+\bibitem{Zhou}
+D.~Zhou, J.~Huang, and B.~Sch\"{o}lkopf.
+\newblock Learning with hypergraphs: Clustering, classification, and embedding.
+\newblock Technical report, School of Computer Science University of Waterloo,
+  2006.
+
+\end{thebibliography}

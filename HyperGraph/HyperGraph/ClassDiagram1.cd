@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Odometer">
+    <Position X="11" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAABAAAAAABAAAAAEhAAAAAAA=</HashCode>
+      <FileName>HyperGraph.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HyperEdge&lt;T&gt;">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAgAAAAAAAAAAAAgAAAAAAAAAAAgAAAAAAgAAAAAAA=</HashCode>
+      <FileName>HyperGraph.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HyperIndex&lt;T&gt;">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAADAAAEAkAAAAAAAAAAAAAAgAABAAAAAAAA=</HashCode>
+      <FileName>HyperGraph.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrderedHyperGraph&lt;T&gt;">
+    <Position X="3.5" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAkEAABAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HyperGraph.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Nodes" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

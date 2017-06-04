@@ -1,0 +1,210 @@
+\chapter{Algorithms referenced in paper}
+
+\begin{algorithm}
+	\caption{Union}\label{Union}
+	\begin{algorithmic}[1]
+		\Function{$Union(A,B)$}{}
+		\State $returnValue \gets \emptyset$ 
+		\ForAll {$\{n,i\} \in A$}
+		\If {$!returnValue.contains(n)$}
+		\State $returnValue.push(n)$
+		\EndIf
+		\EndFor
+		\ForAll {$\{n,i\} \in B$}
+		\If {$!returnValue.contains(n)$}
+		\State $returnValue.push(n)$
+		\EndIf
+		\EndFor
+		\State \Return $returnValue$ 
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{Intersection}\label{Intersection}
+	\begin{algorithmic}[1]
+		\Function{$Intersection(A,B)$}{}
+		\State $returnValue \gets \emptyset$ 
+		\ForAll {$ \{n_A,i_A\} \in A$}
+		\ForAll {$ \{n_B,i_B\} \in B$}
+		\If{$n_A = n_B$}
+		\State $returnValue.push(n_A)$
+		\EndIf
+		\EndFor
+		\EndFor
+		\State \Return $returnValue$ 
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{Minus}\label{Minus}
+	\begin{algorithmic}[1]
+		\Function{$Minus(A,B)$}{}
+		\State $returnValue \gets \emptyset$
+		\ForAll {$ \{n_A,i_A\} \in A$}
+		\State $add \gets true$
+		\ForAll {$ \{n_B,i_B\} \in B$}
+		\If {$n_A =n_B$}
+		\State $add \gets false$
+		\EndIf
+		\EndFor
+		\If {$add = true$}
+		\State $returnValue.push(n_A)$
+		\EndIf
+		\EndFor
+		\State \Return $returnValue$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{StrictEqual}\label{StrictEqual}
+	\begin{algorithmic}[1]
+		\Function{$StrictEqual(A,B)$}{}
+		\ForAll {$ \{n_A,i_A\} \in A$}
+		\ForAll {$ \{n_B,i_B\} \in B$}
+		\If {$n_A !=n_B$}
+		\State \Return $false$
+		\EndIf
+		\EndFor
+		\EndFor
+		\State \Return $true$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{SetEqual}\label{SetEqual}
+	\begin{algorithmic}[1]
+		\Function{$SetEqual(A,B)$}{}
+		\State $A \gets Sort(A)$;
+		\State $B \gets Sort(B)$;
+		\State \Return $StrictEqual(A,B)$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{DoesACoverB}\label{DoesACoverB}
+	\begin{algorithmic}[1]
+		\Function{$DoesACoverB(A,B)$}{}
+		\ForAll {$ \{n_A,i_A\} \in A$}
+		\State $found \gets false$
+
+		\ForAll {$ \{n_B,i_B\} \in B$}
+		\If {$n_A =n_B$}
+		\State $found \gets true$
+		\EndIf
+		\EndFor
+
+		\If {$found = false$}
+		\State \Return $false$
+		\EndIf
+		\EndFor
+		\State \Return $true$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{DoesACoverBorBCoverA}\label{DoesACoverBorBCoverA}
+	\begin{algorithmic}[1]
+		\Function{$DoesACoverBorBCoverA(A,B)$}{}
+		\If {$DoesACoverB(A,B)=true$}
+		\State \Return $true$
+		\EndIf
+		\If {$DoesACoverB(B,A)=true$}
+		\State \Return $true$
+		\EndIf
+		\State \Return $false$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{DoesAHitB}\label{DoesAHitB}
+	\begin{algorithmic}[1]
+		\Function{$DoesAHitB(A,B)$}{}
+		\ForAll {$ \{n_A,i_A\} \in A$}
+		\ForAll {$ \{n_B,i_B\} \in B$}
+		\If {$n_A =n_B$}
+		\State \Return $true$
+		\EndIf
+		\EndFor
+		\EndFor
+		\State \Return $false$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{DoesAHitAll}\label{DoesAHitAll}
+	\begin{algorithmic}[1]
+		\Function{$DoesAHitAll(A,list\_of\_o)$}{}
+		\ForAll {$ \{o,i\} \in list\_of\_o$}
+		\If {$DoesAHitB(A,o)=false$}
+		\State \Return $false$
+		\EndIf
+		\EndFor
+		\State \Return $true$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{DoesAnyHitA}\label{DoesAnyHitA}
+	\begin{algorithmic}[1]
+		\Function{$DoesAnyHitA(list\_of\_o,A)$}{}
+		\ForAll {$ \{o,i\} \in list\_of\_o$}
+		\If {$DoesAHitB(o,A)=true$}
+		\State \Return $true$
+		\EndIf
+		\EndFor
+		\State \Return $false$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+	\caption{GenerateNMinusOne}\label{GenerateNMinusOne}
+	\begin{algorithmic}[1]
+		\Function{$GenerateNMinusOne(o)$}{}
+		\State $returnValue \gets \emptyset$ // list of odometers
+		\ForAll {$ \{n,i\} \in o$}
+		\State $add \gets o$  // copy odometer
+		\State $add.remove(n,i)$ // erase 1 value.
+		\State $returnValue.push(add)$ 
+		\EndFor
+		\State \Return $returnValue$ // N odometers, each with one item removed. 
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+	\caption{Gen2expNtruefalse}\label{Gen2expNtruefalse}
+	\begin{algorithmic}[1]
+		\Function{$Gen2expNtruefalse(n)$}{}
+		\State $returnValue \gets \emptyset$ // list of (list of true|false)
+		\State $max = 1 << n$ // max is 2\^n bit shifted.
+		\ForAll {$ i \in 0..max$}
+		\State $add \gets \emptyset$ // list of true|false
+		\State $counter \gets 1$
+		\While {$counter < max$}
+		\If {$counter \& i = counter$}
+		\State $add.push(true)$
+		\Else
+		\State $add.push(false)$
+		\EndIf
+		\State $counter \gets counter << 1$ // bit shift left.
+		\EndWhile
+		\State $returnValue.push(add)$ 
+		\EndFor
+		\State \Return $returnValue$ // N odometers, each with one item removed. 
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+

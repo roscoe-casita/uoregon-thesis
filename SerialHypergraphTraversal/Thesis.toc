@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Definitions}{4}
+\contentsline {subsection}{\numberline {2.1}Definition: List}{4}
+\contentsline {subsection}{\numberline {2.2}Definition: Odometer \nobreakspace {}\cite {Odometer:Fuchs}}{4}
+\contentsline {subsection}{\numberline {2.3}Definition: Unrestricted Hypergraph}{5}
+\contentsline {subsection}{\numberline {2.4}Definition: Normal Hypergraph \nobreakspace {}\cite {Hypergraph:Book}}{6}
+\contentsline {subsection}{\numberline {2.5}Definition: Simple Hypergraph}{6}
+\contentsline {subsection}{\numberline {2.6}Definition: Transversal of a Hypergraph}{7}
+\contentsline {subsection}{\numberline {2.7}Problem: Find all minimal transversals for a given hypergraph}{7}
+\contentsline {section}{\numberline {3}Naive solution}{7}
+\contentsline {section}{\numberline {4}Branch and Bound}{7}
+\contentsline {section}{\numberline {5}Polynomial Space Solution (Recursive)}{7}
+\contentsline {section}{\numberline {6}Pseudo-Polynomial Space Solution (Serial)}{7}
+\contentsline {section}{\numberline {7}Testing}{8}
+\contentsline {section}{\numberline {8}Performance}{8}
+\contentsline {section}{\numberline {9}Future Directions}{8}
+\contentsline {section}{\numberline {10}Bibliography}{9}

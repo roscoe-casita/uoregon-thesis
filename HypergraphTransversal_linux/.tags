@@ -1,0 +1,124 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddOdometer	Odometer.cpp	/^std::vector<Odometer> AddOdometer(const std::vector<Odometer> copy,const Odometer add)$/;"	f
+AddOdometers	Odometer.cpp	/^std::vector<Odometer> AddOdometers(const std::vector<Odometer> copy,const std::vector<Odometer> add)$/;"	f
+Alphas	HyperGraph_Transversal.h	/^	std::vector<Odometer> Alphas;$/;"	m	class:THGResult
+BadTransversalCalls	HyperGraph_Transversal.h	/^int BadTransversalCalls =0;$/;"	v
+Betas	HyperGraph_Transversal.h	/^	std::vector<Odometer> Betas;$/;"	m	class:THGResult
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -Wall$/;"	m
+Children	hypergraph_transversal.cpp	/^	std::vector<MinTravTreeNode *> Children;$/;"	m	class:MinTravTreeNode	file:
+Combinations	HyperGraph_Enumeration.h	/^static bool Combinations(Odometer &index,HyperGraph<T> &graph)$/;"	f
+CompileDotFile	GraphVizNodeDecorator.cpp	/^void CompileDotFile(std::string base_filename,std::string extension)$/;"	f
+ConcatVector	template_helpers.h	/^inline std::vector<T> ConcatVector(std::vector<T> part1,std::vector<T> part2)$/;"	f
+Database	GraphVizNodeDecorator.h	/^	std::map<std::string,size_t> Database;$/;"	m	class:IdentifierDatabase
+EnumerationControl	HyperGraph_Enumeration.h	/^static void EnumerationControl( bool (*func)(HyperEdge<T> item, Odometer &index, HyperGraph<T> &graph),Odometer start, HyperGraph<T> &graph)$/;"	f
+ExplicitHyperGraph	HyperGraph.h	/^	ExplicitHyperGraph(const ExplicitHyperGraph<T> &hyper_graph) $/;"	f	class:ExplicitHyperGraph
+ExplicitHyperGraph	HyperGraph.h	/^	ExplicitHyperGraph(std::vector<HyperEdge<T> > hyper_edges)$/;"	f	class:ExplicitHyperGraph
+ExplicitHyperGraph	HyperGraph.h	/^class ExplicitHyperGraph$/;"	c
+Gamma	HyperGraph_Transversal.h	/^class Gamma$/;"	c
+Gammas	HyperGraph_Transversal.h	/^	std::vector<Gamma> Gammas;$/;"	m	class:THGResult
+Gen2DConnectedGraph	hypergraph_transversal.cpp	/^ExplicitHyperGraph<char> Gen2DConnectedGraph(int count)$/;"	f
+GenFullyConnectedGraph	HyperGraph.h	/^std::vector<HyperEdge<T> > GenFullyConnectedGraph(HyperEdge<T> nodes)$/;"	f
+GenerateGraphviz	GraphVizNodeDecorator.cpp	/^std::string GenerateGraphviz(GraphVizNodeDecorator *root,bool digraph,std::string name)$/;"	f
+GenerateGraphvizChildren	hypergraph_transversal.cpp	/^	virtual std::vector<GraphVizNodeDecorator *> GenerateGraphvizChildren()$/;"	f	class:MinTravTreeNode
+GenerateGravizEdge	GraphVizNodeDecorator.cpp	/^std::string GraphVizNodeDecorator::GenerateGravizEdge(GraphVizNodeDecorator *edge,bool digraph)$/;"	f	class:GraphVizNodeDecorator
+GenerateGravizEdgeDecoration	GraphVizNodeDecorator.cpp	/^std::string GraphVizNodeDecorator::GenerateGravizEdgeDecoration(GraphVizNodeDecorator *edge)$/;"	f	class:GraphVizNodeDecorator
+GenerateGravizNode	GraphVizNodeDecorator.cpp	/^std::string GraphVizNodeDecorator::GenerateGravizNode()$/;"	f	class:GraphVizNodeDecorator
+GenerateID	GraphVizNodeDecorator.cpp	/^std::string IdentifierDatabase::GenerateID()$/;"	f	class:IdentifierDatabase
+GenerateNextDepth	HyperGraph_Transversal.h	/^std::vector<MinHypergraphStackFrame> GenerateNextDepth(MinHypergraphStackFrame frame, Odometer o)$/;"	f
+GetHyperEdge	HyperGraph.h	/^	virtual HyperEdge<T> GetHyperEdge(Odometer index)	$/;"	f	class:ExplicitHyperGraph
+GetHyperEdge	HyperGraph.h	/^	virtual HyperEdge<T> GetHyperEdge(Odometer index)	$/;"	f	class:HyperGraph
+GetHyperEdgeCount	HyperGraph.h	/^	virtual size_t GetHyperEdgeCount()		$/;"	f	class:ExplicitHyperGraph
+GetHyperEdges	HyperGraph.h	/^	virtual std::vector<HyperEdge<T> > GetHyperEdges(const std::vector<Odometer> &index)$/;"	f	class:ExplicitHyperGraph
+GetHyperEdges	HyperGraph.h	/^	virtual std::vector<HyperEdge<T> > GetHyperEdges(const std::vector<Odometer> &index)$/;"	f	class:HyperGraph
+GetHyperIndex	HyperGraph.h	/^	Odometer GetHyperIndex(int i){ return HyperEdges[i];}$/;"	f	class:ExplicitHyperGraph
+GetHyperIndex	HyperGraph.h	/^	virtual Odometer GetHyperIndex(HyperEdge<T> edge)$/;"	f	class:ExplicitHyperGraph
+GetHyperIndex	HyperGraph.h	/^	virtual Odometer GetHyperIndex(HyperEdge<T> edge)$/;"	f	class:HyperGraph
+GetNodeCount	HyperGraph.h	/^	virtual size_t GetNodeCount()		$/;"	f	class:ExplicitHyperGraph
+GetNodeCount	HyperGraph.h	/^	virtual size_t GetNodeCount()		$/;"	f	class:HyperGraph
+GetPaperHypergraphSample	hypergraph_transversal.cpp	/^ExplicitHyperGraph<char> GetPaperHypergraphSample()$/;"	f
+GraphVizNodeDecorator	GraphVizNodeDecorator.cpp	/^GraphVizNodeDecorator::GraphVizNodeDecorator():UniqueIdentifier(StaticIdentifiers.GenerateID())$/;"	f	class:GraphVizNodeDecorator
+GraphVizNodeDecorator	GraphVizNodeDecorator.h	/^class GraphVizNodeDecorator$/;"	c
+GraphVizNodeDecorator_H_	GraphVizNodeDecorator.h	2;"	d
+HEADERS	Makefile	/^HEADERS = $(wildcard *.h)$/;"	m
+HYPERGRAPH_HPP	HyperGraph.h	3;"	d
+HYPERGRAPH_TRANSVERSAL_H	HyperGraph_Transversal.h	5;"	d
+HittingSet	HyperGraph_Transversal.h	/^	bool HittingSet;$/;"	m	class:TransversalReturnCall
+HyperEdge	HyperGraph.h	/^class HyperEdge: public std::vector<T>$/;"	c
+HyperEdges	HyperGraph.h	/^	std::vector<Odometer> HyperEdges;$/;"	m	class:ExplicitHyperGraph
+HyperGraph	HyperGraph.h	/^	HyperGraph( HyperGraph<T> &hyper_graph) $/;"	f	class:HyperGraph
+HyperGraph	HyperGraph.h	/^	HyperGraph(){}$/;"	f	class:HyperGraph
+HyperGraph	HyperGraph.h	/^	HyperGraph(HyperEdge<T> nodes)$/;"	f	class:HyperGraph
+HyperGraph	HyperGraph.h	/^class HyperGraph$/;"	c
+HyperGraphTransversals	HyperGraph_Transversal.h	/^void HyperGraphTransversals(ExplicitHyperGraph<T> &ehg,size_t count, void (*process_transversal_set)(std::vector<Odometer>,ExplicitHyperGraph<T> &), void (*process_tree)(const MinHypergraphStackFrame & , const std::vector<MinHypergraphStackFrame> &, Odometer,ExplicitHyperGraph<char> &))$/;"	f
+Identifier	HyperGraph_Transversal.h	/^	int Identifier;$/;"	m	class:MinHypergraphStackFrame
+Identifier	hypergraph_transversal.cpp	/^	int Identifier;$/;"	m	class:MinTravTreeNode	file:
+IdentifierDatabase	GraphVizNodeDecorator.cpp	/^IdentifierDatabase::IdentifierDatabase()$/;"	f	class:IdentifierDatabase
+IdentifierDatabase	GraphVizNodeDecorator.h	/^class IdentifierDatabase$/;"	c
+IntersectHypergraphTransversalWithEdge	HyperGraph_Transversal.h	/^THGResult IntersectHypergraphTransversalWithEdge(std::vector<Odometer> &Transversals,Odometer o)$/;"	f
+Intersection	HyperGraph_Transversal.h	/^	Odometer Intersection;$/;"	m	class:Gamma
+Intersection	Odometer.cpp	/^Odometer Intersection(const Odometer &A, const Odometer &B)$/;"	f
+IsTransversal	HyperGraph_Transversal.h	/^TransversalReturnCall IsTransversal(ExplicitHyperGraph<T> &ehg, const Odometer &o)$/;"	f
+LIBS	Makefile	/^LIBS = -lm$/;"	m
+MinHypergraphStackFrame	HyperGraph_Transversal.h	/^	MinHypergraphStackFrame()$/;"	f	class:MinHypergraphStackFrame
+MinHypergraphStackFrame	HyperGraph_Transversal.h	/^class MinHypergraphStackFrame$/;"	c
+MinTravTreeNode	hypergraph_transversal.cpp	/^	MinTravTreeNode(MinHypergraphStackFrame &frame)$/;"	f	class:MinTravTreeNode
+MinTravTreeNode	hypergraph_transversal.cpp	/^class MinTravTreeNode:public GraphVizNodeDecorator$/;"	c	file:
+Minus	Odometer.cpp	/^Odometer Minus(const Odometer &A, const Odometer &B)$/;"	f
+MultiPermutations	HyperGraph_Enumeration.h	/^static bool MultiPermutations(Odometer &index,HyperGraph<T> &graph)$/;"	f
+NaiveAllHittingSets	HyperGraph_Transversal.h	/^void NaiveAllHittingSets(ExplicitHyperGraph<T> &ehg,void (*process_hitting_set)(Odometer o, HyperEdge<T> hit_set))$/;"	f
+NaiveBranchAndBoundByNodeMinHypergraphTransversals	HyperGraph_Transversal.h	/^void NaiveBranchAndBoundByNodeMinHypergraphTransversals(ExplicitHyperGraph<T> &ehg,size_t count, void (*process_min_hitting_set)(Odometer o, HyperEdge<T> min_set))$/;"	f
+NodeLabel	GraphVizNodeDecorator.h	/^	std::string NodeLabel;$/;"	m	class:GraphVizNodeDecorator
+NodeShape	GraphVizNodeDecorator.h	/^	std::string NodeShape;$/;"	m	class:GraphVizNodeDecorator
+Nodes	HyperGraph.h	/^	HyperEdge<T> Nodes;$/;"	m	class:ExplicitHyperGraph
+Nodes	HyperGraph.h	/^	HyperEdge<T> Nodes;$/;"	m	class:HyperGraph
+Nodes	hypergraph_transversal.cpp	/^std::map<int,MinTravTreeNode *> Nodes;$/;"	v
+OBJECTS	Makefile	/^OBJECTS = $(patsubst %.cpp, %.o, $(wildcard *.cpp))$/;"	m
+ODOMETER_H	Odometer.h	2;"	d
+Odometer	Odometer.h	/^class Odometer : public std::vector<int>$/;"	c
+Original	HyperGraph_Transversal.h	/^	Odometer Original;$/;"	m	class:Gamma
+Permutations	HyperGraph_Enumeration.h	/^static bool Permutations(Odometer &index,HyperGraph<T> &graph)$/;"	f
+PrintAndResetCalls	HyperGraph_Transversal.h	/^void PrintAndResetCalls()$/;"	f
+PrintOdometer	Odometer.cpp	/^void PrintOdometer(const Odometer &o)$/;"	f
+ProcessMinimumHittingSet	hypergraph_transversal.cpp	/^void ProcessMinimumHittingSet(Odometer o, HyperEdge<char> edge)$/;"	f
+ProcessTransversal	hypergraph_transversal.cpp	/^void ProcessTransversal(std::vector<Odometer> transversal,ExplicitHyperGraph<char> &ehg)$/;"	f
+RecurseGraphVizNodeDecorators	GraphVizNodeDecorator.cpp	/^void RecurseGraphVizNodeDecorators(GraphVizNodeDecorator *root, std::vector<GraphVizNodeDecorator *> &visited, std::stringstream &printer,bool digraph)$/;"	f
+RetireID	GraphVizNodeDecorator.cpp	/^void IdentifierDatabase::RetireID(std::string id)$/;"	f	class:IdentifierDatabase
+ReverseIndex	HyperGraph.h	/^	std::map<T,size_t> ReverseIndex;$/;"	m	class:ExplicitHyperGraph
+ReverseIndex	HyperGraph.h	/^	std::map<T,size_t> ReverseIndex;$/;"	m	class:HyperGraph
+StaticIdentifiers	GraphVizNodeDecorator.cpp	/^IdentifierDatabase StaticIdentifiers;$/;"	v
+SubIsHittingSet	HyperGraph_Transversal.h	/^	bool SubIsHittingSet;$/;"	m	class:TransversalReturnCall
+TARGET	Makefile	/^TARGET = HGT_APP$/;"	m
+TEMPLATE_HELPERS_H	template_helpers.h	2;"	d
+THGResult	HyperGraph_Transversal.h	/^class THGResult$/;"	c
+TransversalCalls	HyperGraph_Transversal.h	/^int TransversalCalls =0;$/;"	v
+TransversalCount	HyperGraph_Transversal.h	/^int TransversalCount = 0;$/;"	v
+TransversalReturnCall	HyperGraph_Transversal.h	/^class TransversalReturnCall$/;"	c
+Transversals	HyperGraph_Transversal.h	/^	std::vector<Odometer> Transversals;$/;"	m	class:MinHypergraphStackFrame
+Union	Odometer.cpp	/^Odometer Union(const Odometer &A, const Odometer &B)$/;"	f
+Unionize	Odometer.cpp	/^Odometer Unionize(const std::vector<Odometer> &singles)$/;"	f
+UniqueIdentifier	GraphVizNodeDecorator.h	/^	const std::string UniqueIdentifier;$/;"	m	class:GraphVizNodeDecorator
+ValidCharacters	GraphVizNodeDecorator.h	/^	std::vector<char> ValidCharacters;$/;"	m	class:IdentifierDatabase
+WriteDotFile	GraphVizNodeDecorator.cpp	/^void WriteDotFile(std::string file_name,std::string content)$/;"	f
+XMinusIntersection	HyperGraph_Transversal.h	/^	Odometer XMinusIntersection;$/;"	m	class:Gamma
+YMinusIntersection	HyperGraph_Transversal.h	/^	Odometer YMinusIntersection;$/;"	m	class:Gamma
+begin	HyperGraph.h	/^	std::vector<Odometer>::iterator begin(){return HyperEdges.begin();}$/;"	f	class:ExplicitHyperGraph
+end	HyperGraph.h	/^	std::vector<Odometer>::iterator end(){return HyperEdges.end();}$/;"	f	class:ExplicitHyperGraph
+global_id	HyperGraph_Transversal.h	/^int global_id = 1;$/;"	v
+main	hypergraph_transversal.cpp	/^int main(int argc, char *argv[])$/;"	f
+operator <<	HyperGraph.h	/^std::ostream &operator<<(std::ostream &printer, const HyperEdge<T> &hyperedge)$/;"	f
+operator <<	HyperGraph.h	/^std::ostream &operator<<(std::ostream &printer, const std::vector<HyperEdge<T> > &hyperedges)$/;"	f
+operator <<	Odometer.cpp	/^std::ostream &operator<<(std::ostream &printer,const Odometer &o)$/;"	f
+operator <<	Odometer.cpp	/^std::ostream &operator<<(std::ostream &printer,const std::vector<Odometer> &odometers)$/;"	f
+operator =	HyperGraph.h	/^	virtual ExplicitHyperGraph<T> &operator=(const ExplicitHyperGraph<T> &hyper_graph) $/;"	f	class:ExplicitHyperGraph
+operator =	HyperGraph.h	/^	virtual HyperGraph<T> &operator=(HyperGraph<T> &hyper_graph) $/;"	f	class:HyperGraph
+process_Hypergraph_transversal_tree_node	hypergraph_transversal.cpp	/^ void process_Hypergraph_transversal_tree_node(const MinHypergraphStackFrame &first,const std::vector<MinHypergraphStackFrame> &next,Odometer edge,ExplicitHyperGraph<char> &ehg)$/;"	f
+~ExplicitHyperGraph	HyperGraph.h	/^	virtual ~ExplicitHyperGraph()$/;"	f	class:ExplicitHyperGraph
+~GraphVizNodeDecorator	GraphVizNodeDecorator.cpp	/^GraphVizNodeDecorator::~GraphVizNodeDecorator()$/;"	f	class:GraphVizNodeDecorator
+~HyperGraph	HyperGraph.h	/^	virtual ~HyperGraph(void)$/;"	f	class:HyperGraph
+~IdentifierDatabase	GraphVizNodeDecorator.cpp	/^IdentifierDatabase::~IdentifierDatabase()$/;"	f	class:IdentifierDatabase

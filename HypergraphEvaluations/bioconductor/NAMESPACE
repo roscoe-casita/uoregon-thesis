@@ -1,0 +1,35 @@
+import(methods)
+importFrom(utils, head, tail)
+import(graph)
+
+exportClasses(Hypergraph, Hyperedge, DirectedHyperedge)
+
+exportMethods(
+   nodes, 
+   label, 
+   "label<-", 
+   show, 
+   toUndirected, 
+   head, 
+   tail, 
+   hyperedges,
+   numNodes, 
+   inciMat,
+   inciMat2HG,
+   initialize, 
+   toGraphNEL, 
+   hyperedgeLabels
+)
+
+export(
+   kCoresHypergraph,
+   vCoverHypergraph
+)
+
+export(
+   Hypergraph, 
+   Hyperedge, 
+   DirectedHyperedge, 
+   l2hel
+)
+

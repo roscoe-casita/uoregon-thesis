@@ -1,0 +1,64 @@
+\begin{thebibliography}{10}
+
+\bibitem{PROPERTIES}
+Fiona~Fang Chena, Michael Breedona, Paul Whitea, Clement Chua, Dwaipayan
+  Mallickb, Sebastian Thomasc, Erik Sapperd, and Ivan Colea.
+\newblock Correlation between molecular features and electrochemical properties
+  using an artificial neural network.
+\newblock {\em Materials \& Design}, 112(1):410--418, 12 2016.
+
+\bibitem{BRANCH}
+Jens Clausen.
+\newblock {\em Branch and Bound Algorithms - Principles and Examples.}
+\newblock PhD thesis, Department of Computer Science, University of Copenhagen,
+  Universitetsparken 1, DK-2100 Copenhagen, Denmark, 3 1999.
+
+\bibitem{HEURISTIC}
+Tobias Kind and Oliver Fiehn.
+\newblock Seven golden rules for heuristic filtering of molecular formulas
+  obtained by accurate mass spectrometry.
+\newblock {\em BioMed Central}, 2007(1186):8, 11 2007.
+
+\bibitem{DAVID}
+David Ozog, Allen~D. Malony, and Marina Guenza.
+\newblock {\em The UA↔CG Workflow: High Performance Molecular Dynamics of
+  Coarse-Grained Polymers}.
+\newblock PhD thesis, Department of Computer and Infomation Science, University
+  of Oregon, Eugene, OR 97403, 2 2016.
+
+\bibitem{NICKEL}
+A.M. Rashidia, M.~Hayati, and A.~Rezaeic.
+\newblock Application of artificial neural network for prediction of the
+  oxidation behavior of aluminized nano-crystalline nickel.
+\newblock {\em Materials \& Design}, 42(12):308--316, 12 2012.
+
+\bibitem{PEDRAM}
+Amirmohammad Rooshenas and Daniel Lowd.
+\newblock {\em Discriminative Structure Learning of Arithmetic Circuits}.
+\newblock PhD thesis, Department of Computer and Infomation Science, University
+  of Oregon, Eugene, OR 97403, 12 2016.
+
+\bibitem{ALO}
+Mohsen~Ostad Shabani and Ali Mazahery.
+\newblock Artificial intelligence in numerical modeling of nano sized ceramic
+  particulates reinforced metal matrix composites.
+\newblock {\em Applied Mathematical Modelling}, 36(11):5455--5465, 12 2012.
+
+\bibitem{SILVER}
+Parvaneh Shabanzadeh, Norazak Senu, Kamyar Shameli, and Maryam~Mohaghegh Tabar.
+\newblock Artificial intelligence in numerical modeling of silver nanoparticles
+  prepared in montmorillonite interlayer space.
+\newblock {\em Journal of Chemistry}, 2013(305713):8, 12 2013.
+
+\bibitem{TENSOR}
+Parvaneh Shabanzadeh, Norazak Senu, Kamyar Shameli, and Maryam~Mohaghegh Tabar.
+\newblock Quantum-chemical insights from deep tensor neural networks.
+\newblock {\em Journal of Physics}, 2016(08259):8, 11 2016.
+
+\bibitem{BALANCE}
+Lawrence~R. Thorne.
+\newblock An innovative approach to balancing chemical-reaction equations: A
+  simplified matrix-inversion technique for determining the matrix null space.
+\newblock {\em Chem. Educator}, 15(15):304--308, 12 2010.
+
+\end{thebibliography}

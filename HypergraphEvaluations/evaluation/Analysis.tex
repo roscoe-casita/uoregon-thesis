@@ -1,0 +1,85 @@
+
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{url}
+
+\title{Qualitative Analysis: Hypergraph packages}
+\author{Roscoe Casita}
+\date{}
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\newpage
+\section{Bioconductor: Hypergraph}
+
+Location:\\
+ \url{http://bioconductor.org/packages/release/bioc/html/hypergraph.html}\\
+
+\begin{tabular}{| l |r | r |}
+	\hline
+	Restriction Description & Pro & Con \\
+	\hline
+	Programing Language: R & Configured for R Packages. & No other languages. \\
+	Undirected \& Directed & Easy implementation &Non-repeating edges. \\
+	List of edges & Easy implementation & $O(N)$ random time.\\
+	Direct conversion to/from graph & Sparse matrix list & No generated support \\
+	Static/Non-generated & Fast access &Must fit in main memory\\
+	\hline
+	\hline
+	Odometer Support: None. & N/A & N/A \\
+	Infinite/Generated Hypergraph: None. & N/A & N/A \\
+	Iterative Functions: None. & N/A & N/A \\
+	Rounded Space Mapping: None. & N/A & N/A \\
+	\hline
+\end{tabular}\\
+
+
+\indent
+The Bioconductor Hypergraph software package provides a Hypergraph template package that allows for simple standard graphs to be converted to hypergraph structures. The implementation uses a fixed list of hyperedge to construct the hypergraph. The size of the hypergraph is restricted to sizes that can fit in main memory. There is no support for generated / enumerated / projected hypergraphs. \\
+
+This software package introduces a lightweight template that needs to be customized to the specific application. There are no standard algorithms  provided or enumeration techniques built into the interface.   
+
+\newpage
+\section{PaToHs: Hypergraph Partitioner}
+\begin{tabular}{| l | r | r |}
+		\hline
+		Restriction Description & Pro & Con \\
+		\hline
+		Programming Language: C/C++ \& Matlab & Lightweight C & Tiny Library \\
+		Graphs that need Cutting. & Highly optimized partitioner & One problem only.\\
+		Array of Nodes \& Edges & Pure Functional & No support functions\\
+		Hypergraph File Format & Read / Write routines provided & Arbitrary file format\\
+		Integer Weights & Specilized partitioning & No generic algorithms.\\
+		\hline
+		\hline
+		Odometer Support: ``Pins'' & User Managed & Parameters to functions\\
+		Infinite/Generate Hypergraph: None & N/A & N/A \\
+		Iterative Functions: Callbacks & Only Cut function & N/A\\
+		Rounded Space Mapping: None & N/A & N/A \\
+		\hline
+\end{tabular}
+
+\newpage
+\section{Zoltan: Hypergraph Partitioner}
+\begin{tabular}{| l | r | r |}
+	\hline
+	Restriction Description & Pro & Con \\
+	\hline
+	Programming Language: C++11 & Support Team & Larger code base \\
+	Graphs that need Cutting. & Highly optimized partitioner & One problem only.\\
+	Vector of Nodes \& Edges & Tilinos Integration & Non-std-template based.\\
+	Specialized Graph Adapter & Easy partitioning mapping & No generic hypergraph.\\
+	Weight for edge cut & Specilized for partitioning & No generic algorithms.\\
+	\hline
+	\hline
+	Odometer Support: Primitive & Internal Maps Observed & No external access.\\
+	Infinite/Generate Hypergraph: None & N/A & N/A \\
+	Iterative Functions: Callbacks & Greedy Algorithms for NP & Only Weighted solutions.\\
+	
+	Rounded Space Mapping: None & N/A & N/A \\
+	\hline
+\end{tabular}
+\end{document}

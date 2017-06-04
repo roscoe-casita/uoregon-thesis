@@ -1,0 +1,36 @@
+digraph Tree
+{
+labelloc="t"
+label="Tree Traversal: NR = Not a Reaction, UR = Unique Reaction, LC = Linear Combination"
+
+{rank=same Set1 Set6 Set11}
+
+ Set1 [shape=box label = "{H2} = NR"]
+Set1 -> Set2
+ Set2[shape=box label = "{H2,O2} = NR"]
+Set2 -> Set3
+ Set3 [shape=oval label = "{H2,O2,H2O} = UR"]
+Set3 -> Set4
+ Set4 [shape=doubleoctagon label = "{H2,O2,H2O,H2O2} = LC"]
+Set4 -> Set5
+ Set5 [shape=oval label = "{H2,O2,H2O2} = UR"]
+Set5 -> Set6
+ Set6 [shape=box label = "{H2,H2O} = NR"]
+Set6 -> Set7
+ Set7 [shape=oval label = "{H2,H2O,H2O2} = UR"]
+Set7 -> Set8
+ Set8 [shape=box label = "{O2} = NR"]
+Set8 -> Set9
+ Set9 [shape=box label = "{O2,H2O} = NR"]
+Set9 -> Set10
+ Set10 [shape=box label = "{O2,H2O,H2O2} = UR"]
+Set10 -> Set11
+ Set11 [shape=box label = "{O2,H2O2} = NR"]
+Set11 -> Set12
+ Set12 [shape=box label = "{H2O} = NR"]
+Set12 -> Set13
+ Set13 [shape=box label = "{H2O,H2O2} = NR"]
+Set13 -> Set14
+ Set14 [shape=box label = "{H2O2} = NR"]
+
+}

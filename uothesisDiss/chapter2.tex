@@ -1,0 +1,135 @@
+\chapter{Definitions}
+
+\section{Lists, Queues, Stacks, N-Trees, etc...}
+This paper assumes the reader is familiar with the basic data structures such as lists, arrays, stacks, queues, trees, graphs etc. Let a list $l$ be an ordered list of things $\{t,i\}$ where each thing $t$ must be the same type, and $t$ is only distinguishable by its index $i$. For the purposes of this paper, $x.push(y)$ will insert $y$ at the last index of the list, $x.pop()$ will remove from the last index of the list.  $x.enque(y)$ will insert $y$ at the last index of the list. $x.dequeue()$ will remove from the first index of the list. A list-of-lists structure is used in this paper to represent the traversal of an N way branching tree. The following statements are assumed to be familiar notation and self explanatory:
+
+\begin{algorithm}
+	\caption{Factorial(N)}\label{factorial}
+	\begin{algorithmic}[1]
+		\Function{Factorial($n$) // N!, with  }{}
+		\State $l \gets \emptyset$ // initialize an empty list, type = list of int
+		\State $q \gets \emptyset$ // list used as a queue, type = list of (list of int)
+		\ForAll {$ i \in {0,1,..,n}$} 
+		\State $l[i] = i$ // ith index is set to the index value.
+		\EndFor
+		\State $l.dequeue()$  // remove the zero at the front of the list. 
+		\State $q.push(l)$ // add the list of numbers to a list
+		\State \Return $MultiplyList(q)$ 
+		\EndFunction
+	\end{algorithmic}
+	\begin{algorithmic}[1]
+		\Function{MultiplyList($mul$)}{}
+		\State $returnValue \gets 1$ // Multiplicative identity is 1, type = int.
+		\While {$mul.size() >0$} // all the lists
+		\State $sublist \gets mul.pop()$ // extract the next sublist
+		\ForAll {$ {v,i} \in q$}  // for each element in the sub list
+		\State $returnValue \gets returnValue * v$ 
+		\EndFor
+		\EndWhile
+		\State \Return $returnValue$ // return the list of list multiply
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+\section{Odometers }
+
+An odometer is an ordered multiset of integer numbers. Let an odometer $o$ be an list of integers $n$ and indexes $\{n,i\}$. The $i^{th}$ indexable integer of an odometer can be written $n_i = o[i]$. Integers $n$ can be repeated, they are distinguished via their index. Indexes $i$ are unique non-repeating whole numbers from $[0,\infty]$. The size of the odometer is written as $o.size()$, is the count of $\{n,i\}$. \\
+
+Instead of reasons about hyperedges, odometers and used in their place. In the next section is it shown they are mutually exchangeable. Bit vectors are commonly used instead for set operations, but in this case the number of vertexes is usually far larger then system bit sizes (32,64 etc). When using full integers for items in the list there are $N^M$ values are available, where $N$ is the count of integers, and $M$ is the number of values that integers can take on. Thus $O(N^{(2^{bits})})$ is the general complexity without restrictions. \cite{Odometer:Fuchs}
+
+An odometer is a construct used extensively throughout this paper as it can be treated as an ordered set of numbers, an unordered bag of numbers, as an instance container to store state. As an unrestricted list of numbers the odometer is similar to an instance of a turing machine tape. \\
+
+The following common functions are defined in Code Appendix C: $Union$, $Intersection$, $Minus$, $StrictEqual$, $SetEqual$. The following functions are implemented, additionally they are short circuit versions when possible: $DoesACoverB$, $DoesAHitB$,$DoesACoverBorBCoverA$, $DoesAHitAll$, $DoesAnyHitA$. Please note that all functions are polynomial in both space and time. Also note that $DoesAHitAll$ implements the hitting set test. $GenerateNMinusOne(o)$ is used for both minimal hitting set and other functions.\\
+
+\section{Unrestricted Hypergraphs}
+The traditional hypergraph definition $H=(V,E)$ is terse for implementers. Traditionally a hypergraph is defined as a collection of sets where there is no ordering and repeated elements are not allowed. The following definitions were used  to implement the hypergraph interface. The odometer is of particular interest as it can be used independently from hypergraphs for linear integer optimization techniques.\\
+
+Let a hyperedge $e$ be a list of vertexes: $e =\{v,i\}$. The $i^{th}$ indexable vertex of $e$ can be written $v_i = e[i]$. Vertexes $v$ can be repeated, they are distinguished via their index. Indexes $i$ are unique non-repeating whole numbers from $[0,\infty]$. The size of the hyperedge written as $e.size()$ is the count of $\{v,i\}$.
+
+
+Let an unrestricted hypergraph $U$ be a single hyperedge $nodes$ and the two functions $OtoE$ and $EtoO$. $OtoE$ is the surjective function to map a given odometer to a hyperedge. $EtoO$ is the injective function to map a given hyperedge to an odometer. The hyperedge $U.nodes$ cannot repeat any vertexes $v$ for the function $EtoO$ to behave correctly. \\
+
+Given these definitions, the following is now possible given a hypergraph: A hyperedge can be constructed from an odometer. An odometer can be constructed from a hypergraph. While the functions in the paper use hyperedges the code uses odometers in place of hyperedges. Thus every instance of a hyperedges can be converted to an instance of an odometer, and every instance of an odometer can be converted to an instance of a hyperedge.\\
+
+Specifically the odometer is an instance of a set of integer numbers that can be reasoned about independently of a hypergraph. The code implements some common set functions that allow the constraints to be expressed, such as union, minus, include short circuit versions of functions for faster performance. 
+
+\begin{algorithm}
+	\caption{OdometerToHyperedge}\label{OtoE}
+	\begin{algorithmic}[1]
+		\Function{OtoE($U,o$)}{}
+		\State $e \gets \emptyset$
+		\State $size \gets U.nodes.size()$
+		\ForAll {$ \{n,i\} \in o$}
+		\State // where -2 \% 7 = 5 as mod.
+		\State $e[i] \gets U.nodes[ n \% size ]$ // convert an integer number to index.
+		\EndFor
+		\State \Return $e$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+\begin{algorithm}
+	\caption{HyperedgeToOdometer}\label{EtoO}
+	\begin{algorithmic}[1]
+		\Function{EtoO($U,e$)}{}
+		\State $o \gets \emptyset$
+		\ForAll{$\{v_e,i_e\} \in e$}  // use hashmap of v to i
+		\ForAll{$\{v_n,i_n\} \in U.nodes$} // to reduce $O(n^2)$ to $O(n)$
+		\If {$v_e = v_n$}
+		\State $o[i_e] \gets i_n$ // lookup index and save as integer.
+		\EndIf
+		\EndFor
+		\EndFor
+		\State \Return $o$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+Notice that these functions provide polynomial time access to all permutations, combinations, repeats, patterns etc. Thus reasoning about a hyperedge is equivalent to reasoning about its corresponding odometer, and vice versa. Vertex data can be complex and large, thus reasoning about the odometer in place of the hyperedge is for performance and interesting reasons noted later.
+\newpage
+
+\section{Normal Hypergraphs \cite{Hypergraph:Book}}
+% \cite{Hypergraph:Book}
+Let a \textit{normal} hypergraph be $H = (V,E)$ where $V$ is a list of vertexes ${v,i}$, $E$ is a list of hyperedges ${e,i}$ where each hyperedge $e$ is a subset of $V$. The following trivial restrictions must be imposed to get the expected behavior out of a \textit{normal} hypergraph given the unrestricted list definitions. No hyperedge contains a duplicated vertex. Every vertex in all hyperedges is contained in the hypergraph list of vertexes. There are no duplicate hyperedges. The maximal size of a hyperedge is the size of all hypergraph vertexes. Every vertex exists in at least one hyperedge. There are no duplicate vertexes in the hypergraph.\\
+
+
+\begin{equation*}
+\begin{matrix}
+\forall e \in E , \forall v, v' \in e \vert v \ne v'\\
+\forall e \in E , \forall v \in e \vert v \in V\\
+\forall e \in E , \not\exists e' \in E \vert e = e'\\
+\forall e \in E \vert |e| \le |V|\\
+\forall v \in V , \exists e \in E \vert v \in e\\
+\forall v \in V , \not\exists v' \in V \vert v = v'\\
+\end{matrix}
+\end{equation*}
+
+\section{Simple Hypergraphs}
+Let a $simple$ hypergraph be $H=(V,E)$ as $normal$ hypergraph with the additional restriction that no hyperedge fully contains any other hyperedge. \begin{equation*}
+\begin{matrix}
+\forall e , e' \in E \vert e \not \subseteq e' \wedge e' \not \subseteq e\\
+\end{matrix}
+\end{equation*}
+
+\section{Minimal Transversal of a Hypergraph}
+Let the transversal of a hypergraph $T \subseteq H.V$ be a hitting set of all the hyperedges of a hypergraph such that $DoesAHitAll(T,H.E) = true$. Using the definitions of $GenerateNMinusOne$ the following implementation determines if an odometer hits ever odometer in a list.\\
+
+\begin{algorithm}
+	\caption{IsMinimalTransversal}\label{IsMinimalTransversal}
+	\begin{algorithmic}[1]
+		\Function{IsMinimalTransversal($o,list\_of\_o$)}{}
+		\If {$DoesAHitAll(o,list\_of\_o)=false$}
+		\State \Return $false$
+		\EndIf
+		\ForAll {$\{o_n,i_n\} \in GenerateNMinusOne(o)$}
+		\If {$DoesAHitAll(o_n,list\_of\_o)$}
+		\State \Return $false$
+		\EndIf
+		\EndFor
+		\State \Return $true$
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}
+
+
+\section{All minimal transversals}
+There are $2^{|V|}$ possible combination sets that can be derived from the hypergraph $H=(V,E)$. Thus there are $2^{|V|}$ transversals that need to be enumerated. Potentially  Thus every piecewise combination of this hypergraphs hyperedges is a valid transversal, thus the maximal upper bound on the total number of minimal transversals of all simple hypergraphs is  $O(2^{|V|})$ total transversals. Thus scalable algorithms must use polynomial space storage and exponential time to enumerate the potentially exponential number of traversals.

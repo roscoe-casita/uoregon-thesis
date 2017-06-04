@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Week10.aux
+The style file: abbrv.bst
+Database file #1: Week10.bib.bib
+Warning--entry type for "ALGORYTM" isn't style-file defined
+--line 2 of file Week10.bib.bib
+You've used 6 entries,
+            2118 wiz_defined-function locations,
+            545 strings with 4698 characters,
+and the built_in function-call counts, 1570 in all, are:
+= -- 153
+> -- 71
+< -- 1
++ -- 29
+- -- 22
+* -- 108
+:= -- 289
+add.period$ -- 17
+call.type$ -- 6
+change.case$ -- 29
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 54
+empty$ -- 119
+format.name$ -- 22
+if$ -- 314
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 2
+newline$ -- 32
+num.names$ -- 12
+pop$ -- 24
+preamble$ -- 1
+purify$ -- 23
+quote$ -- 0
+skip$ -- 42
+stack$ -- 0
+substring$ -- 70
+swap$ -- 4
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 0
+while$ -- 14
+width$ -- 7
+write$ -- 68
+(There was 1 warning)

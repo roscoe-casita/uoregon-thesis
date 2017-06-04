@@ -1,0 +1,35 @@
+digraph Leters
+{
+odometerlabel[label = "Odometer"]
+odometerlabel -> odometer
+hyperedgelabel[label = "HyperEdge"]
+hyperedge -> hyperedgelabel
+hypergraphlabel[label = "HyperGraph"]
+hypergraphlabel -> hypergraph
+{rank = same odometerlabel odometer}
+{rank = same hyperedgelabel hyperedge}
+{rank = same hypergraphlabel hypergraph}
+odometer [shape=record label="{9|8|7|6|5|4|3|2|1|0}|{<9922> 2|<8844> 4|<7766> 6|<6655> 5|<5511> 1|<4455> 5|<3344> 4|<2244> 4|<1133> 3|<0000> 0}"];
+hyperedge [shape=record label="{<99> 9|<88> 8|<77> 7|<66> 6|<55> 5|<44> 4|<33> 3|<22> 2|<11> 1|<00> 0}|{<dd> d|<ll> l|<rr> r|<oo> o|<WW> W|<oo> o|<ll> l|<ll> l|<ee> e|<HH> H}"];
+hypergraph [shape=record label="{<00> 0|<HH> H}|{<11> 1|<WW> W}|{<22> 2|<dd> d}|{<33> 3|<ee> e}|{<44> 4|<ll> l}|{<55> 5|<oo> o}|{<66> 6|<rr> r}"];
+odometer:0000 -> hypergraph:00
+hypergraph:HH -> hyperedge:00
+odometer:1133 -> hypergraph:33
+hypergraph:ee -> hyperedge:11
+odometer:2244 -> hypergraph:44
+hypergraph:ll -> hyperedge:22
+odometer:3344 -> hypergraph:44
+hypergraph:ll -> hyperedge:33
+odometer:4455 -> hypergraph:55
+hypergraph:oo -> hyperedge:44
+odometer:5511 -> hypergraph:11
+hypergraph:WW -> hyperedge:55
+odometer:6655 -> hypergraph:55
+hypergraph:oo -> hyperedge:66
+odometer:7766 -> hypergraph:66
+hypergraph:rr -> hyperedge:77
+odometer:8844 -> hypergraph:44
+hypergraph:ll -> hyperedge:88
+odometer:9922 -> hypergraph:22
+hypergraph:dd -> hyperedge:99
+}

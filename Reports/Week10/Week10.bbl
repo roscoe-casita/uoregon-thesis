@@ -1,0 +1,37 @@
+\begin{thebibliography}{1}
+
+\bibitem{MultiSVD}
+D.~Ghoshdastidar and A.~Dukkipati.
+\newblock Spectral clustering using multilinear svd: Analysis, approximations
+  and applications.
+\newblock {\em AAAI}, 29(29):2610--2616, 12 2015.
+
+\bibitem{LEARNING}
+P.~Harwood.
+\newblock Learning with hypergraphs: Clustering, classification, and embedding.
+\newblock Master's thesis, Max Planck Institute for Biological Cybernetics,
+  Spemannstr. 38, 72076 T¨ubingen, Germany, 7 2006.
+
+\bibitem{samples}
+T.~Michoel and B.~Nachtergaele.
+\newblock Alignment and integration of complex networks by hypergraph-based
+  spectral clustering.
+\newblock {\em Physics.SOC}, 3(1205):3630, 11 2012.
+
+\bibitem{ALGORYTM}
+A.~Y. Ng, M.~I. Jordan, and Y.~Weiss.
+\newblock On spectral clustering: Analysis and an algorithm, 12 2001.
+
+\bibitem{INTRO}
+U.~von Luxburg.
+\newblock A tutorial on spectral clustering.
+\newblock Technical Report 149, Max Planck Institute for Biological
+  Cybernetics, Spemannstr. 38, 72076 T¨ubingen, Germany, 8 2006.
+
+\bibitem{TUNING}
+L.~Zelnik-Manor and P.~Perona.
+\newblock Self-tuning spectral clustering.
+\newblock Master's thesis, California Institute of Technology, Pasadena, CA
+  91125, USA, 12 2007.
+
+\end{thebibliography}

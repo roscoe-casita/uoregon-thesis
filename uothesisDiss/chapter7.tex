@@ -1,0 +1,43 @@
+
+\chapter{Testing}
+
+\section{Generating Hypergraphs}
+Hypergraphs are a relatively new data structure; large datasets are not currently modeled as hypergraphs so ensuring correctness is the onus of the implementers. We seek to prove the algorithm is correct for a large set of small hypergraphs and a small set of large hypergraphs. The following algorithm will generate all simple hypergraphs with node count $N$. The complexity is exponentially exponential on the order of ${{{N!}^{N-1!}}^{N-2!}}^{...}$. 
+\begin{algorithm}
+	\caption{GenHypergraphs}\label{GenHypergraphs}
+	\begin{algorithmic}[1]
+		\Function{$GenHypergraphs(Nodes,CallbackFunc)$}{}
+		\State $V = {Nodes}$ // new hyperedge for a hypergraph of all the nodes.
+		\State $E = {Nodes}$ // single hyperedge of all the nodes.
+		\State $H = (V,E)$ // hypergraph with the above.
+		\State $CurrentQueue.push(H)$ 
+		\State $WorkQueue.push(CurrentQueue)$
+		\While {$!WorkQueue.empty()$}
+		\State $CurrentQueue \gets WorkQueue.pop()$
+		\State $H \gets CurrentQueue.pop()$
+		\If {$!CurrentQueue.empty()$}
+		\State  $WorkQueue.push(CurrentQueue)$
+		\EndIf
+		\State $CallbackFunc(H)$ // process generated hypergraph
+		\State $CurrentQueue = GenerateHypergraphChildren(H)$
+		\If {$!CurrentQueue.empty()$}
+		\State  $WorkQueue.push(CurrentQueue)$
+		\EndIf
+		\EndWhile
+		\EndFunction
+	
+		\Function{$GenerateHypergraphChildren(H)$}{}
+		\State $Children \gets \emptyset$
+		\ForAll{$edge \in H.E$}
+		\ForAll {$\{edges,i\} \in GenerateNMinusOne(edge) $}
+		\State $new\_edges \gets H.E \setminus edge)$ // every edge but the new ones
+		\ForAll {$\{e_n,i_n\} \in edges$}
+		\State $new\_edges.push(e_n)$ // add new broken down edges.
+		\EndFor 
+		\State $Children.push(Hypergraph(H.V,new\_edges))$
+		\EndFor
+		\State \Return $Children$
+		\EndFor
+		\EndFunction
+	\end{algorithmic}
+\end{algorithm}

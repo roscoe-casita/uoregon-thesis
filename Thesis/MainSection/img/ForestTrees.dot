@@ -1,0 +1,4 @@
+ digraph hypergraph{ 
+A -> { B -> {C -> {D}}}
+
+}

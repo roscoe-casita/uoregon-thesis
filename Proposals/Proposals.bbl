@@ -1,0 +1,82 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ausiello}
+Giorgio Ausiello, Giuseppe~F. Italiano, and Umberto Nanni.
+\newblock Optimal traversal of directed hypergraphs.
+\newblock {\em University of Berkeley}, 1992.
+
+\bibitem{Berge}
+Claude Berge.
+\newblock Hypergraphs.
+\newblock {\em North-Holland Mathematical Library}, 1989.
+
+\bibitem{Jens}
+Jens Clausen.
+\newblock Branch and bound algorithms - principles and examples.
+\newblock 1999.
+
+\bibitem{Devine}
+Karen~D. Devine, Erik~G. Boman, Robert~T. Heaphy, Rob~H. Bisseling, and Umit~V.
+  Catalyurk.
+\newblock Parallel hypergraph partitioning for scientific computing.
+\newblock 2006.
+
+\bibitem{Aurelien}
+Aur\'{e}lien Ducournau and Alain Bretto.
+\newblock Random walks in directed hypergraphs and application to
+  semi-supervised image segmentation.
+\newblock {\em Computer Vision and Image Understanding}, 2014.
+
+\bibitem{Fuchs}
+Phillip~P. Fuchs.
+\newblock Permutation odometers.
+\newblock 2016.
+
+\bibitem{Lawder}
+J~K Lawder.
+\newblock Calculation of mappings between one and $n$-dimensional values using
+  the hilbert space-filling curve.
+\newblock 2000.
+
+\bibitem{Mohamed}
+Mohamed~F. Mokbel, Walid~G. Aref, and Ibrahim Kamel.
+\newblock Performance of multi-dimensional space-filling curves.
+\newblock 2003.
+
+\bibitem{Molnar}
+B\'{a}lint Moln\'{a}r.
+\newblock Applications of hypergraphs in informatics: A survey and
+  opportunities for research.
+\newblock {\em Annales Univ. Sci. Budapest.}, 2014.
+
+\bibitem{Nielsen}
+Lars~Relund Nielsen, Kim~Allan Anderson, and Daniele Pretolani.
+\newblock Finding the $k$ shortest hyperpaths: algorithms and applications.
+\newblock 2004.
+
+\bibitem{ACM}
+Communications of~the ACM.
+\newblock How to partition a billion-node graph.
+\newblock 2014.
+
+\bibitem{Ritz}
+Anna Rita and T.M. Murali.
+\newblock Pathway analysis with signaling hypergraphs.
+\newblock {\em Publications of the ACM}, 2014.
+
+\bibitem{Satu}
+Satu~Elisa Schaeffer.
+\newblock Survey: Graph clustering.
+\newblock 2007.
+
+\bibitem{Sun}
+Zhao Sun, Hongzhi Wang, Haixun Wang, Bin Shao, and Jianzhong Li.
+\newblock Efficient subgraph matching on billion node graphs.
+\newblock 2012.
+
+\bibitem{Zhou}
+Dengyong Zhou, Jiayuan Huang, and Bernard Sch\"{o}lkopf.
+\newblock Learning with hypergraphs: Clustering, classification, and embedding.
+\newblock {\em NEC Laboratories America, Inc.}, 2006.
+
+\end{thebibliography}

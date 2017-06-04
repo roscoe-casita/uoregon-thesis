@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage{mathtools} 
+\usepackage{cite}
+\usepackage{hyperref} 
+\usepackage{mathtools} 
+\usepackage{cite}
+\usepackage{graphicx}
+
+\begin{document}
+
+\section{Spectral Hypergraph Clustering}
+
+Clustering is known to be NP hard, especially given that the definition and semantics of clustering can change. Spectral clustering is specifically the grouping of data into sets of data where each set exhibits some feature that is being classified. The tutorial paper covers the subject giving mathematical background, pseudo code and pictorial analysis over complex data sets \cite{INTRO}. \\
+
+The algorithm which demonstrates the difference between k-means, spectral clustering and its effectiveness is covered in \cite{ALGORYTM}. This key work comes up in the citations of future works, showing the critical work that Ng-Jordan-Weiss did in this area. The further research in the tuning of the algorithm \cite{TUNING} shows that the parameters of the algorithm where critical to making the clusters correctly. The eigenvalues are analyzed to derive the optimal number of groups to tune the spectral clustering algorithm.  This is shown here:  \url{http://www.vision.caltech.edu/lihi/Demos/SelfTuningClustering.html}\\
+
+A survey of techniques used by spectral clustering hypergraphs across multiple domains and again the results come back to the decision made with input parameters tuned based on eigenvalues or other heuristics\cite{samples}. The study of partitioning hypergraphs into clusters has lead to other insights. Using a linear time SVD approximation of the eigenvectors, a k-means partitioning is used, again leading back to the fundamental relationship that the eigenvectors and eigenvalues play a key fundamental role in determining the optimal cluster numbers to select. \\ 
+
+Areas for further research include the weights in the hypergraph \cite{LEARNING} need to be analyzed. This is particularly important because of the weights of the hypergraph in the chemical reaction network pertain to the stoichiometric ratios. Each hyperedge in the hypergraph represented a feature, each node weighted at 1 in this research paper, they specifically mention that this weight did not play into their algorithm. \\
+
+
+
+
+\newpage
+	
+\nocite{*}
+\bibliographystyle{abbrv}
+\bibliography{Week10.bib}
+
+
+\end{document}

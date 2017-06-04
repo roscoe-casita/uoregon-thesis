@@ -1,0 +1,107 @@
+\documentclass[10pt]{article}
+\usepackage{mathtools} 
+\usepackage{cite}
+\usepackage{hyperref} 
+\usepackage{mathtools} 
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+\begin{document}
+
+	Experimental Battery Research
+\begin{abstract}
+	The project proposed is to design, build, and deliver a system which accurately generates new chemical batteries.  This combinatoric chemical reaction problem requires a distributed system to explore the search space. Deployment of multiple models each using deep machine learning techniques will train with both theoretical and experimental data.  The parallel models will be used to simulate \& predict observable laboratory measurements used by AI search agents optimizing over battery characteristics. Reserved known chemical batteries will be used to validate predictions in situ to ensure there is confidence in testing new experimental batteries. 
+\end{abstract}
+\tableofcontents
+\section{Phase 1: Feasibility study. Completed.}
+
+\subsection{Planning and background.}
+The construction of an accurate simulation environment which can predict half-cell potentials, activation energies, and characterize battery performance before testing in the laboratory can reduce the costs of empirical testing by magnitudes. The disconnect between chemical composition, expected reaction physical configuration, and empirical measurements can be bridged using a series of AI and machine learning techniques to learn the real world results to build better approximate models. The databases of know material compounds is growing; by inference the hyper graph of all possible reactions is growing as well.  The perfect model for all simulations is impossible. Fundamentally there are multiple models at varying scales that describe chemistry from approximately to exactly. Modeling each aspect of the features of chemical reactions leads to a complex system that must be designed upfront for future expansion as more or less detail is added and/or removed.\\
+
+
+\newpage
+\section{Phase 2: Multicomponent Modeling system}
+\newpage
+\subsection{Features of Batteries}
+AI and machine learning will be applied to learn the distributed properties of chemistry models at various levels. Here features and properties are used to describe the various aspects of materials, reactions of those materials, batteries, and metrics of performance. Hidden features which are not discovered or named are accounted for in the AI model as hidden nodes which cannot be sampled or observed. The following are features of materials are available from the materials science project database. A simple common chemical compound such as $H_2O$ can have over 20 different distinct entries representing the different phases and shapes of the material. \\
+
+\noindent
+\begin{tabular}{|c c c c|}
+	\hline
+	Elements & Density & Stoichiometry & Ionization energy\\
+	Bond types & Symmetry group & Magnetic moment & Formation energy\\
+	Oxidation states & Band Gap & Lattice parameters & Bond lengths\\
+	\hline
+\end{tabular}\\
+
+The following features are selected from the sets of materials and physical constraints. Even if every feature variable domain is highly restricted the combinations grow exponentially in this example: $$O(4^N*4^R)$$
+\noindent
+\begin{tabular}{| c c c c|}
+	\hline
+	Anode material & Cathode material & Charge carrier & Charge holder \\
+	Shape & Volume & Surface & Interface \\ 
+	\hline
+\end{tabular}\\
+
+The set of reaction features is the greatest unknown as some of the values must be derived from analysis of experimental data, such as activation energy with respect to catalysts over time. These features can currently be learned from book material and tested against from inferred data. They cannot be directly sampled in the laboratory so they will be modeled as internal variables that can be examined.\\
+ 
+ \noindent
+ \begin{tabular}{| c c c c|}
+ 	\hline
+ 	Half-cell potential & Reduction potential & Oxidation potential & Activation Energy \\
+ 	Catalyst & Inhibitor & Enthalpy & \\
+ 	\hline
+ \end{tabular}
+ 
+
+The next set of features is also commonly profiled with respect to batteries specifically. These features can only be sampled from a complete complex systems. These features can be shown to influence the other features, such as raising the temperature changes the internal resistance which changes the discharge and charge rates. The features also vary with respect to time and charge cycles.\\
+
+\noindent
+\begin{tabular}{| c c c c|}
+	\hline
+	Discharge Rate & Charge Rate & Discharge efficiency & Charge efficiency \\
+	Temperature & Voltage & Resistance & Amperage \\
+	Time to charge & Time to discharge & Enthalpy & Entropy\\
+	Power density & Shelf life & Charge cycles & Operating Temp \\
+	\hline
+\end{tabular}	
+	
+
+
+
+\section{Phase 3: Data Gathering}
+After proving that the models and simulation produce results similar to text book examples of the given features the data gathering phase of the project is ready to proceed.  Sample batteries each with different specific chemical reactions will be purchased and analyzed. The specific goal would be to have a total spanning set of battery reactions that cover the commercially viable elements, approximately 39 different batteries with different elements. 28 which are available today. The characteristics and parameters will be used as training data for the modeling simulation AI during learning mode. Several batteries will need to be saved to validate that predicted results match real experimental results within acceptable margins of error. The simulation model will contain multitudes of abstraction layers which each have approximate eigenvalue weights that are able to encode the hidden parameters of battery construction.  
+
+
+\noindent
+\begin{tabular}{| c c c c |}
+	\hline
+	Common name & anode & cathode & electrolyte \\
+	\hline
+	Zinc-Carbon & $Zn$ & $MnO_2$ & $NH_4Cl$, $ZnCl_2$\\
+	Magnesium & $Mg$ & $MnO_2$ & $MgBr_2$, $Mg(ClO_4)$ \\
+	Manganese Dioxide & $Zn$ & $MnO_2$ & $KOH$ \\
+	Mercuric Oxide & $Zn$ & $HgO$ & $KOH$, $NaOH$ \\
+	Cadmium Mercury & $Cd$ & $HgO$ & $KOH$ \\
+	Silver Oxide & $Zn$ & $Ag_2O$, $AgO$ & $KOH$ , $NaOH$\\
+	Zinc Air & $Zn$ & $O_2$ & $KOH$ \\
+	Lithium & $Li$ & $SO_2$ & Organic solvent salt solution \\
+	Lithium & $Li$ & $SOC$ & $SOCl_2$, $AlCl_4$ \\
+	Lithium & $Li$ & $MnO_2$ & Organic solvent salt solution\\
+	Lithium & $Li$ & $FeS_2$ & Organic solvent salt solution \\
+	Lithium & $Li$ & $I_2$ & Solid \\
+	Lead Acid & $Pb$ & $PbO_2$ & $H_2SO_4$ \\
+	Nicad & $Cd$ & $NiOOH$ & $KOH$ \\
+	Ni-Iron & $Fe$ & $NiOOH$ & $KOH$  \\
+	Silver-Zinc & $Zn$ & $AgO$ & $KOH$ \\
+	Silver-Cadmium & $Cd$ & $AgO$ & $KOH$ \\
+	Nickel Hydride & $H_2$ & $NiOOH$ & $KOH$ \\
+	Metal-Hydride & $M_xH$ & $NiOOH$ & $KOH$ \\
+	Manganese Recharge & $Zn$ & $MnO_2$ & $KOH$ \\
+	Lithium & $C$ & $LiCoO2$ & organic solvent\\
+	\hline	
+\end{tabular}
+
+\end{document}

@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Phase 1: Feasibility study. Completed.}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Planning and background.}{1}{subsection.1.1}
+\contentsline {section}{\numberline {2}Phase 2: Multicomponent Modeling system}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Features of Batteries}{3}{subsection.2.1}
+\contentsline {section}{\numberline {3}Phase 3: Data Gathering}{4}{section.3}

@@ -1,0 +1,38 @@
+digraph Leters
+{
+
+{rank= same matrix hypergraph hyperedge}
+Odometer -> matrix;
+matrix [shape = "record", label ="{0|<f0>7}|{1|<f1>-4}|{2|<f2>11}|{3|<f3>18}|{4|<f4>-2}|{5|<f5>-13}|{6|<f6>-9}|{7|<f7>-1}|{8|<f8>25}|{9|<f9>9}"];
+
+matrix:f0 -> hypergraph:f0;
+matrix:f1 -> hypergraph:f3;
+matrix:f2 -> hypergraph:f4;
+matrix:f3 -> hypergraph:f4;
+matrix:f4 -> hypergraph:f5;
+matrix:f5 -> hypergraph:f1;
+matrix:f6 -> hypergraph:f5;
+matrix:f7 -> hypergraph:f6;
+matrix:f8 -> hypergraph:f4;
+matrix:f9 -> hypergraph:f2;
+
+
+HyperGraph -> hypergraph;
+
+hypergraph [shape="record",label ="{<f0>0|<f1>1|<f2>2|<f3>3|<f4>4|<f5>5|<f6>6}|{<e0>H|<e1>W|<e2>d|<e3>e|<e4>l|<e5>o|<e6>r}"];
+
+hypergraph:e0 -> hyperedge:f0;
+hypergraph:e3 -> hyperedge:f1;
+hypergraph:e4 -> hyperedge:f2;
+hypergraph:e4 -> hyperedge:f3;
+hypergraph:e5 -> hyperedge:f4;
+hypergraph:e1 -> hyperedge:f5;
+hypergraph:e5 -> hyperedge:f6;
+hypergraph:e6 -> hyperedge:f7;
+hypergraph:e4 -> hyperedge:f8;
+hypergraph:e2 -> hyperedge:f9;
+
+hyperedge [shape = "record", label ="{<f0>0|H}|{<f1>1|e}|{<f2>2|l}|{<f3>3|l}|{<f4>5|o}|{<f5>5|W}|{<f6>6|o}|{<f7>7|r}|{<f8>8|l}|{<f9>9|d}"];
+hyperedge-> HyperEdge;
+
+}

@@ -1,0 +1,27 @@
+\select@language {UKenglish}
+\contentsline {chapter}{\numberline {I}\uppercase {Introduction}}{1}
+\contentsline {chapter}{\numberline {II}\uppercase {Definitions}}{2}
+\contentsline {section}{ Lists, Queues, Stacks, N-Trees, etc...}{2}
+\contentsline {section}{ Odometers }{3}
+\contentsline {section}{ Unrestricted Hypergraphs}{4}
+\contentsline {section}{ Normal Hypergraphs \cite {Hypergraph:Book}}{6}
+\contentsline {section}{ Simple Hypergraphs}{6}
+\contentsline {section}{ Minimal Transversal of a Hypergraph}{7}
+\contentsline {section}{ All minimal transversals}{7}
+\contentsline {chapter}{\numberline {III}\uppercase {Chapter 3 header}}{8}
+\contentsline {chapter}{\numberline {IV}\uppercase {Naive solution}}{9}
+\contentsline {chapter}{\numberline {V}\uppercase {Branch and Bound}}{10}
+\contentsline {chapter}{\numberline {VI}\uppercase {Iterative Pseudo-Polynomial Space}}{11}
+\contentsline {section}{ Define: Hypergraph stack frame}{11}
+\contentsline {subsection}{ Define: Gamma}{11}
+\contentsline {subsection}{ Define: IHGResult }{11}
+\contentsline {subsection}{ Generate IHGResult from Transversals and Edge}{12}
+\contentsline {section}{ IS Appropriate}{13}
+\contentsline {section}{ Generate Next Depth}{13}
+\contentsline {chapter}{\numberline {VII}\uppercase {Testing}}{17}
+\contentsline {section}{ Generating Hypergraphs}{17}
+ \pagebreak [3]\vspace {3ex} \nopagebreak \noindent {APPENDICES}\nopagebreak 
+\contentsline {chapter}{\number@appendix {1}{A.} \uppercase {Appendix A: }}{19}
+\contentsline {chapter}{\number@appendix {2}{B.} \uppercase {appendix 1 title}}{20}
+\contentsline {chapter}{\number@appendix {3}{C.} \uppercase {Algorithms referenced in paper}}{21}
+\contentsline {chapter}{REFERENCES CITED}{25}

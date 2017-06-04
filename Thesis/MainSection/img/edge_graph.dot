@@ -1,0 +1,17 @@
+graph Leters
+{
+V1 -- {E1,E5}
+V2 -- {E1,E2}
+V3 -- {E1,E2,E3,E4}
+V4 -- {E4,E5}
+V5 -- {E3,E3}
+V6 -- {E3,E5}
+
+V1 [shape=point]
+V2 [shape=point]
+V3 [shape=point]
+V4 [shape=point]
+V5 [shape=point]
+V6 [shape=point]
+
+}

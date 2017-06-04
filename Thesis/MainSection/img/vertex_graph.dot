@@ -1,0 +1,13 @@
+graph Leters
+{
+E1 -- {V1,V2,V3}
+E2 -- {V2,V3}
+E3 -- {V3,V5,V6}
+E4 -- {V3,V4}
+E5 -- {V1,V4,V6}
+E1 [shape = point]
+E2 [shape = point]
+E3 [shape = point]
+E4 [shape = point]
+E5 [shape = point]
+}

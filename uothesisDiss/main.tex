@@ -1,0 +1,37 @@
+
+\documentclass[dissertation, copyright, final]{uothesis}
+\usepackage[english,UKenglish]{babel}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{natbib}
+\usepackage{mathtools} 
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+%%%PREFATORY PAGES
+\include{cover}
+\include{abstract}
+\include{cv}
+\include{acknowledgements}  %%acknowledgements page optional
+\include{dedication} %%dedication page optional
+
+%%%MAIN DOCUMENT
+\begin{document}
+\maketitle
+%%%CHAPTERS
+\include{chapter1}
+\include{chapter2}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
+\include{chapter7}
+%%%APPENDICES
+\appendix
+\include{appendix1}
+\include{appendix2}
+\include{appendix3}
+%%BIBILIOGRAPHY
+\bibliographystyle{unsrtnat}
+\bibliography{dissbib} %%disbib.bib uses BibTex formatting.
+\end{document}
